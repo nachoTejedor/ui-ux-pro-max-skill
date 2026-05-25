@@ -4,58 +4,281 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index, follow" />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JECBD8LKHR"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JECBD8LKHR');</script>
+  <!-- SEO Técnico: máxima visibilidad de snippet, imagen y vídeo en Google -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="theme-color" content="#060610" />
 
-  <!-- SEO Primary -->
-  <title>Skyaweb | Agencia de Inteligencia Artificial para Empresas y PYMEs</title>
+  <!-- ── SEO PRIMARIO ──────────────────────────── -->
+  <!-- Título: keyword-first, 52 chars, incluye ubicación y brand -->
+  <title>Agencia de IA y Desarrollo Web en Zaragoza — Agentes IA, SEO y Automatización | Skyaweb</title>
+
   <meta name="description"
-    content="Skyaweb: agencia especializada en agentes de IA para captar más clientes. Automatizamos tu negocio y creamos webs de alta conversión. Más clientes, más ingresos, con IA." />
-  <meta name="keywords"
-    content="agencia inteligencia artificial, agentes IA empresas, agentes IA pymes, captación clientes IA, páginas web conversión, automatización IA, marketing digital IA, agencia IA España, web alta conversión, inteligencia artificial negocios" />
-  <meta name="author" content="Skyaweb" />
-  <link rel="canonical" href="https://skyaweb.com/" />
+    content="Agencia de IA en Zaragoza. Agentes 24/7, webs de conversión y automatización para PYMEs. Más clientes. Consulta gratis." />
 
-  <!-- Open Graph / Social -->
+  <meta name="keywords"
+    content="agencia de ia, agencia de ia zaragoza, seo para ia, visibilidad en chatgpt, automatización empresarial con ia, geo seo ia, aparecer en chatgpt, posicionamiento ia, agencia seo zaragoza, agentes ia zaragoza, automatización empresas zaragoza, inteligencia artificial zaragoza, agencia ia españa, agentes ia pymes, chatbot ia whatsapp empresas, web alta conversión zaragoza, marketing digital ia zaragoza, automatización marketing zaragoza, posicionamiento web zaragoza, agencia digital zaragoza aragón" />
+
+  <meta name="author" content="Skyaweb" />
+  <meta name="geo.region" content="ES-Z" />
+  <meta name="geo.placename" content="Zaragoza, Aragón, España" />
+  <meta name="geo.position" content="41.6488;-0.8891" />
+  <meta name="ICBM" content="41.6488, -0.8891" />
+  <link rel="canonical" href="https://skyaweb.com/" />
+  <link rel="icon" href="./images/cropped-skyaweb-sin-fondo.png" type="image/png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/cropped-skyaweb-sin-fondo.png" />
+
+  <!-- ── OPEN GRAPH / SOCIAL ───────────────────── -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://skyaweb.com/" />
-  <meta property="og:title" content="Skyaweb | Agencia de IA que Multiplica tus Clientes" />
+  <meta property="og:title" content="Agencia de IA en Zaragoza — Agentes IA, SEO y Automatización | Skyaweb" />
   <meta property="og:description"
-    content="Automatizamos tu captación de clientes con agentes de IA y webs de alta conversión. Resultados reales para empresas y PYMEs." />
-  <meta property="og:image" content="https://skyaweb.com/og-image.jpg" />
+    content="Agencia de IA en Zaragoza. Agentes virtuales 24/7, webs de alta conversión y automatización para PYMEs. Consulta gratis." />
+  <meta property="og:image" content="https://skyaweb.com/images/og-skyaweb.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:alt" content="Skyaweb — Agencia de IA en Zaragoza y España" />
   <meta property="og:locale" content="es_ES" />
   <meta property="og:site_name" content="Skyaweb" />
 
-  <!-- Twitter Card -->
+  <!-- ── TWITTER CARD ──────────────────────────── -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Skyaweb | Agencia de IA para Empresas" />
-  <meta name="twitter:description" content="Agentes de IA + webs de alta conversión = más clientes para tu negocio." />
-  <meta name="twitter:image" content="https://skyaweb.com/og-image.jpg" />
+  <meta name="twitter:site" content="@skyaweb" />
+  <meta name="twitter:title" content="Skyaweb | Agencia de IA en Zaragoza — Agentes IA y Automatización" />
+  <meta name="twitter:description" content="Agencia de IA en Zaragoza. Agentes 24/7, webs de conversión y automatización para PYMEs y empresas." />
+  <meta name="twitter:image" content="https://skyaweb.com/images/og-skyaweb.png" />
+  <meta name="twitter:image:alt" content="Skyaweb — Agencia de IA en Zaragoza y España" />
 
-  <!-- Schema.org LocalBusiness -->
+  <!-- ── SCHEMA.ORG STRUCTURED DATA ───────────── -->
+  <!-- @graph unifica Organization + WebSite + WebPage + FAQPage -->
+  <!-- FAQPage genera rich results (acordeón) directamente en Google SERP -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Skyaweb",
-    "description": "Agencia especializada en inteligencia artificial para empresas y PYMEs. Creamos agentes de IA para captar clientes y páginas web de alta conversión.",
-    "url": "https://skyaweb.com",
-    "telephone": "+34628245180",
-    "email": "contacto@skyaweb.com",
-    "areaServed": "ES",
-    "serviceType": ["Agentes de Inteligencia Artificial", "Páginas Web de Alta Conversión", "Automatización de Marketing", "Captación de Clientes con IA"],
-    "sameAs": []
+    "@graph": [
+      {
+        "@type": ["Organization", "ProfessionalService", "LocalBusiness"],
+        "@id": "https://skyaweb.com/#organization",
+        "name": "Skyaweb",
+        "alternateName": "Skyaweb Agencia IA",
+        "description": "Agencia especializada en inteligencia artificial para empresas y PYMEs en España. Creamos agentes de IA para captar clientes 24/7, ecommerce y webs de alta conversión con SEO orgánico avanzado.",
+        "url": "https://skyaweb.com",
+        "logo": {
+          "@type": "ImageObject",
+          "@id": "https://skyaweb.com/#logo",
+          "url": "https://skyaweb.com/images/skyaweb-blanco-sin-fondo.png",
+          "contentUrl": "https://skyaweb.com/images/skyaweb-blanco-sin-fondo.png",
+          "width": 400,
+          "height": 400,
+          "caption": "Skyaweb — Agencia de IA para PYMEs en España"
+        },
+        "image": { "@id": "https://skyaweb.com/#logo" },
+        "telephone": "+34628245180",
+        "email": "contacto@skyaweb.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Zaragoza",
+          "addressRegion": "Aragón",
+          "addressCountry": "ES"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 41.6488,
+          "longitude": -0.8891
+        },
+        "areaServed": [
+          { "@type": "City",              "name": "Zaragoza" },
+          { "@type": "AdministrativeArea","name": "Aragón" },
+          { "@type": "Country",           "name": "España" }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "3",
+          "reviewCount": "3"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "09:00",
+            "closes": "19:00"
+          }
+        ],
+        "priceRange": "€€",
+        "knowsAbout": [
+          "Agencia de IA para Empresas y PYMEs",
+          "Agentes de IA Conversacionales",
+          "SEO para IA y Visibilidad en ChatGPT",
+          "GEO Generative Engine Optimization",
+          "Automatización Empresarial con IA",
+          "Ecommerce de Alta Conversión",
+          "SEO Orgánico Avanzado",
+          "Desarrollo Web de Alta Conversión",
+          "Chatbots WhatsApp Business",
+          "Captación de Clientes con IA"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicios de Inteligencia Artificial para PYMEs y Empresas",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Agentes de IA para Captar Clientes",
+                "description": "Asistentes de inteligencia artificial que atienden, cualifican y convierten clientes 24/7 en web, WhatsApp Business e Instagram DMs."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Webs y Ecommerce de Alta Conversión",
+                "description": "Desarrollo de páginas web y tiendas online con SEO orgánico avanzado y diseño orientado a la conversión. Recomendado por la IA en búsquedas."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Automatización Empresarial con IA",
+                "description": "Flujos de email automáticos, segmentación inteligente y seguimiento predictivo de leads para cerrar más ventas sin intervención manual."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "SEO para IA y Visibilidad en ChatGPT",
+                "description": "Optimizamos tu presencia digital para que ChatGPT, Gemini y Perplexity recomienden tu empresa cuando los usuarios buscan servicios de tu sector. GEO (Generative Engine Optimization) aplicado a PYMEs y empresas en España."
+              }
+            }
+          ]
+        },
+        "sameAs": []
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://skyaweb.com/#website",
+        "url": "https://skyaweb.com",
+        "name": "Skyaweb — Agencia de IA para PYMEs en España",
+        "inLanguage": "es-ES",
+        "publisher": { "@id": "https://skyaweb.com/#organization" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://skyaweb.com/#webpage",
+        "url": "https://skyaweb.com/",
+        "name": "Agencia de IA para PYMEs en España | Skyaweb",
+        "description": "Skyaweb implanta agentes de IA que captan clientes 24/7, webs y ecommerce de alta conversión con SEO avanzado. Más clientes para tu PYME.",
+        "isPartOf": { "@id": "https://skyaweb.com/#website" },
+        "about": { "@id": "https://skyaweb.com/#organization" },
+        "inLanguage": "es-ES"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Cuánto tiempo tardan en implementar el agente de IA?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "En la mayoría de casos tenemos el agente funcionando en 72 horas desde que firmamos el contrato. Para proyectos más complejos con integraciones avanzadas de CRM o múltiples canales, el plazo puede ser de 5 a 7 días laborables."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Funciona para cualquier tipo de negocio?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Hemos trabajado con clínicas, inmobiliarias, academias, gestorías, talleres mecánicos, despachos de abogados y muchos más sectores. Si tu negocio necesita captar o gestionar clientes, la IA puede ayudarte. Hacemos una evaluación gratuita antes de comprometerte."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Necesito conocimientos técnicos para gestionar el agente de IA?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Te entregamos el sistema ya funcionando con un panel de control sencillo. Te formamos en 30 minutos para que puedas ver tus resultados y métricas. El mantenimiento técnico es nuestra responsabilidad."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuánto cuesta implementar un agente de IA para mi empresa?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Cada proyecto es diferente, por eso ofrecemos presupuesto personalizado tras el análisis inicial gratuito. Trabajamos con una cuota de implementación más mantenimiento mensual. Nuestro compromiso: que recuperes la inversión en el primer trimestre."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿El agente de IA puede integrarse con WhatsApp e Instagram?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. Integramos el agente en tu web, WhatsApp Business, Instagram DMs, Facebook Messenger y correo electrónico. Tu cliente elige cómo contactarte y la IA responde en todos los canales con coherencia."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué pasa si el agente de IA no sabe responder algo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "El agente está entrenado específicamente para tu negocio. En los casos que no pueda resolver, lo escala automáticamente a un humano de tu equipo con todo el contexto de la conversación. Nunca deja a un cliente sin atención."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué es el SEO para IA y cómo ayuda a mi empresa a aparecer en ChatGPT?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "El SEO para IA, también conocido como GEO (Generative Engine Optimization), es la disciplina de optimizar tu presencia digital para que los modelos de inteligencia artificial como ChatGPT, Gemini o Perplexity recomienden tu empresa cuando alguien pregunta sobre tu sector. En Skyaweb trabajamos la arquitectura de contenido, el marcado estructurado y la autoridad temática para que tu negocio sea la respuesta que da la IA a tus potenciales clientes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿En qué consiste la automatización empresarial con IA?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "La automatización empresarial con IA conecta todos los procesos de tu negocio —captación de leads, seguimiento, emails, cualificación y atención al cliente— en un sistema que trabaja de forma autónoma. Skyaweb implementa flujos de IA que ejecutan estas tareas en tiempo real, reduciendo el trabajo manual hasta un 80% y permitiendo a tu equipo centrarse en cerrar ventas."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://skyaweb.com/#nacho-tejedor",
+        "name": "Nacho Tejedor",
+        "givenName": "Nacho",
+        "familyName": "Tejedor",
+        "jobTitle": "CEO y Fundador",
+        "description": "Fundador de Skyaweb. Especialista en inteligencia artificial aplicada a empresas, SEO técnico, automatización y transformación digital para PYMEs en España.",
+        "url": "https://skyaweb.com/sobre-nosotros",
+        "email": "contacto@skyaweb.com",
+        "worksFor": { "@id": "https://skyaweb.com/#organization" },
+        "knowsAbout": ["Inteligencia Artificial", "SEO Técnico", "Automatización de Marketing", "Desarrollo Web", "Transformación Digital"],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Zaragoza",
+          "addressRegion": "Aragón",
+          "addressCountry": "ES"
+        }
+      }
+    ]
   }
   </script>
 
-  <!-- Fonts -->
+  <!-- ── FUENTES (pesos mínimos necesarios) ────── -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap"
     rel="stylesheet" />
-
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/lucide.min.css" />
 
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="pages.css" />
@@ -69,7 +292,7 @@
   <nav class="navbar" id="navbar" role="navigation" aria-label="Navegación principal">
     <div class="nav-inner">
       <a href="#inicio" class="nav-logo" aria-label="Skyaweb inicio">
-        <img src="./images/skyaweb-blanco-sin-fondo.png" alt="Logo Skyaweb" width="150" height="150" />
+        <img src="./images/skyaweb-blanco-sin-fondo.png" alt="Skyaweb — Agencia de IA para PYMEs en España" width="150" height="150" />
       </a>
       <ul class="nav-links" role="list">
         <li class="nav-dropdown">
@@ -81,14 +304,15 @@
             </svg>
           </button>
           <ul class="nav-dropdown-menu" role="menu">
-            <li role="none"><a href="agentes-ia.html" role="menuitem">🤖 Agentes de IA</a></li>
-            <li role="none"><a href="webs-conversion.html" role="menuitem">🌐 Webs de Alta Conversión</a></li>
-            <li role="none"><a href="automatizacion.html" role="menuitem">⚡ Automatización de Marketing</a></li>
+            <li role="none"><a href="/agentes-ia" role="menuitem">🤖 Agentes de IA</a></li>
+            <li role="none"><a href="/webs-conversion" role="menuitem">🌐 Desarrollo Web</a></li>
+            <li role="none"><a href="/automatizacion" role="menuitem">⚡ Automatización de Marketing</a></li>
+            <li role="none"><a href="/seo" role="menuitem">🔍 SEO y Posicionamiento</a></li>
           </ul>
         </li>
         <li><a href="#proceso">Proceso</a></li>
-        <li><a href="casos-exito.html">Casos de Éxito</a></li>
-        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="/casos-exito">Casos de Éxito</a></li>
+        <li><a href="/sobre-nosotros">Nosotros</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
       <a href="#contacto" class="btn-nav" aria-label="Contactar con Skyaweb">Hablar con nosotros</a>
@@ -100,12 +324,13 @@
     <!-- Mobile menu -->
     <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menú móvil" aria-hidden="true">
       <ul role="list">
-        <li><a href="agentes-ia.html" class="mobile-link">🤖 Agentes de IA</a></li>
-        <li><a href="webs-conversion.html" class="mobile-link">🌐 Webs de Conversión</a></li>
-        <li><a href="automatizacion.html" class="mobile-link">⚡ Automatización</a></li>
+        <li><a href="/agentes-ia" class="mobile-link">🤖 Agentes de IA</a></li>
+        <li><a href="/webs-conversion" class="mobile-link">🌐 Desarrollo Web</a></li>
+        <li><a href="/automatizacion" class="mobile-link">⚡ Automatización</a></li>
+        <li><a href="/seo" class="mobile-link">🔍 SEO</a></li>
         <li><a href="#proceso" class="mobile-link">Proceso</a></li>
-        <li><a href="casos-exito.html" class="mobile-link">Casos de Éxito</a></li>
-        <li><a href="#testimonios" class="mobile-link">Testimonios</a></li>
+        <li><a href="/casos-exito" class="mobile-link">Casos de Éxito</a></li>
+        <li><a href="/sobre-nosotros" class="mobile-link">Nosotros</a></li>
         <li><a href="#faq" class="mobile-link">FAQ</a></li>
         <li><a href="#contacto" class="mobile-link mobile-cta">Hablar con nosotros</a></li>
       </ul>
@@ -119,6 +344,13 @@
     <canvas id="particle-canvas" aria-hidden="true"></canvas>
     <div class="hero-grid-overlay" aria-hidden="true"></div>
 
+    <!-- Aurora blobs -->
+    <div class="hero-aurora" aria-hidden="true">
+      <div class="aurora-orb aurora-1"></div>
+      <div class="aurora-orb aurora-2"></div>
+      <div class="aurora-orb aurora-3"></div>
+    </div>
+
     <div class="hero-content">
       <div class="hero-badge" aria-label="Agencia de IA">
         <span class="badge-dot" aria-hidden="true"></span>
@@ -126,15 +358,15 @@
       </div>
 
       <h1 id="hero-heading" class="hero-title">
-        Más clientes.<br />
-        Menos esfuerzo.<br />
+        <span class="title-line">Más clientes.</span>
+        <span class="title-line">Menos esfuerzo.</span>
         <span class="gradient-text typewriter" id="typewriter" aria-live="polite"></span>
       </h1>
 
       <p class="hero-subtitle">
         Desplegamos <strong>agentes de IA</strong> que trabajan 24/7 para captar, cualificar y convertir
-        clientes para tu empresa o PYME. Combinados con <strong>webs de alta conversión</strong> diseñadas
-        para vender desde el primer clic.
+        clientes para tu empresa o PYME en España, con menos esfuerzo de tu parte. Combinados con
+        <strong>webs de alta conversión</strong> diseñadas para vender desde el primer clic.
       </p>
 
       <div class="hero-ctas">
@@ -257,8 +489,8 @@
             <li>Integración con tu CRM</li>
             <li>Respuestas personalizadas por sector</li>
           </ul>
-          <a href="#contacto" class="service-cta">
-            Quiero un agente IA
+          <a href="/agentes-ia" class="service-cta">
+            Ver agentes de IA
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               aria-hidden="true">
               <path d="M5 12h14M12 5l7 7-7 7" />
@@ -286,8 +518,8 @@
             <li>SEO técnico avanzado incluido</li>
             <li>A/B testing continuo</li>
           </ul>
-          <a href="#contacto" class="service-cta">
-            Ver más
+          <a href="/webs-conversion" class="service-cta">
+            Ver webs de conversión
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               aria-hidden="true">
               <path d="M5 12h14M12 5l7 7-7 7" />
@@ -314,8 +546,36 @@
             <li>Seguimiento predictivo de leads</li>
             <li>Panel de analítica en tiempo real</li>
           </ul>
+          <a href="/automatizacion" class="service-cta">
+            Ver automatización de marketing
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </article>
+
+        <article class="service-card reveal" aria-labelledby="serv-4-title">
+          <div class="card-glow" aria-hidden="true"></div>
+          <div class="service-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
+          </div>
+          <h3 id="serv-4-title" class="service-title">SEO para IA y Visibilidad en ChatGPT</h3>
+          <p class="service-desc">
+            Optimizamos tu web para que ChatGPT, Gemini y Perplexity te recomienden cuando un usuario
+            pregunta por tu sector. El nuevo SEO no es solo Google: es ser la respuesta de la IA.
+          </p>
+          <ul class="service-features" role="list">
+            <li>Aparecer en respuestas de ChatGPT y Gemini</li>
+            <li>Contenido estructurado para modelos de IA</li>
+            <li>GEO (Generative Engine Optimization)</li>
+            <li>Autoridad de marca en búsquedas por IA</li>
+          </ul>
           <a href="#contacto" class="service-cta">
-            Ver más
+            Quiero visibilidad en IA
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               aria-hidden="true">
               <path d="M5 12h14M12 5l7 7-7 7" />
@@ -442,32 +702,83 @@
         </h2>
         <p class="section-subtitle">
           Estos son los negocios que ya están multiplicando sus clientes con Skyaweb.
-          Mira sus testimonios en vídeo.
+          Resultados reales, con nombres reales.
         </p>
       </div>
 
       <div class="cases-grid" id="cases-grid" role="list">
 
-        <!-- Video Case 1 — ArmariosNCA -->
+        <!-- CASO DESTACADO — HomeStaging Valencia · #1 en Google -->
+        <article class="case-card case-featured reveal" role="listitem" aria-labelledby="c-idx-featured-title">
+
+          <div class="featured-badge" aria-label="Posición número uno en Google">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            #1 en Google
+          </div>
+
+          <div class="featured-layout">
+            <a class="featured-image-wrap" href="https://homestagingvalencia.com" target="_blank" rel="noopener noreferrer"
+              aria-label="Ver HomeStaging Valencia, posición #1 en Google para 'home staging en valencia'">
+              <img src="./images/topseohsv.png"
+                alt="HomeStaging Valencia — posición #1 en Google para 'home staging en valencia'"
+                width="800" height="500" loading="eager" />
+            </a>
+
+            <div class="case-info featured-info">
+              <span class="case-sector featured-sector">Inmobiliaria · Home Staging</span>
+              <h3 id="c-idx-featured-title">HomeStaging Valencia</h3>
+
+              <div class="featured-kw">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                Keyword: "home staging en valencia"
+              </div>
+
+              <p>Web desde cero con SEO técnico avanzado. Resultado: posición <strong>#1 en Google</strong> para su sector en toda la Comunitat Valenciana, superando a competidores con años de ventaja.</p>
+
+              <div class="featured-metrics">
+                <div class="case-metric">
+                  <span class="metric-big metric-gold">#1</span>
+                  <span class="metric-desc">en Google España</span>
+                </div>
+                <div class="case-metric">
+                  <span class="metric-big">+280%</span>
+                  <span class="metric-desc">nuevos leads</span>
+                </div>
+              </div>
+
+              <div style="font-size:13px;color:var(--text-3);margin-bottom:4px;">Servicios: Web SEO · Posicionamiento orgánico · Recomendada por IA</div>
+
+              <a class="featured-link" href="https://homestagingvalencia.com" target="_blank" rel="noopener noreferrer">
+                Ver web en vivo
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case 1 — ArmariosNCA -->
         <article class="case-card reveal" role="listitem" aria-labelledby="case-1-title">
-          <div class="case-video-thumb" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ" role="button"
-            tabindex="0" aria-label="Ver caso de éxito: ArmariosNCA">
+          <a class="case-video-thumb" href="https://armariosnca.com" target="_blank" rel="noopener noreferrer"
+            aria-label="Visitar web de ArmariosNCA">
             <div class="thumb-overlay" aria-hidden="true">
               <div class="play-btn">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <polygon points="5 3 19 12 5 21 5 3" />
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
                 </svg>
               </div>
             </div>
             <div class="thumb-placeholder" aria-hidden="true">
-              <img src="./images/armariosnca.png" alt="Logo Skyaweb" width="400" height="400" />
+              <img src="./images/armariosnca.png" alt="ArmariosNCA — cliente Skyaweb, migración y rediseño web" width="400" height="400" loading="lazy" />
             </div>
-          </div>
+          </a>
           <div class="case-info">
             <span class="case-sector">Fabricación a medida</span>
             <h3 id="case-1-title">ArmariosNCA</h3>
-            <p>Cómo multiplicaron sus solicitudes de presupuesto con un agente IA que cualifica cada lead al instante.
-            </p>
+            <p>Migración y remodelación de la web para dirigir los leads correctamente hacia la tienda, multiplicando las solicitudes de presupuesto.</p>
             <div class="case-metric">
               <span class="metric-big">+3x</span>
               <span class="metric-desc">presupuestos solicitados</span>
@@ -475,55 +786,86 @@
           </div>
         </article>
 
-        <!-- Video Case 2 — Atiende Company -->
+        <!-- Case 2 — Atiende Company -->
         <article class="case-card reveal" role="listitem" aria-labelledby="case-2-title">
-          <div class="case-video-thumb" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ" role="button"
-            tabindex="0" aria-label="Ver caso de éxito: Atiende Company">
+          <a class="case-video-thumb" href="https://atiendecompany.com" target="_blank" rel="noopener noreferrer"
+            aria-label="Visitar web de Atiende Company">
             <div class="thumb-overlay" aria-hidden="true">
               <div class="play-btn">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <polygon points="5 3 19 12 5 21 5 3" />
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
                 </svg>
               </div>
             </div>
             <div class="thumb-placeholder" aria-hidden="true">
-              <img src="./images/atiende.webp" alt="Logo Atiende Company" width="400" height="400" />
+              <img src="./images/atiende.webp" alt="Atiende Company — cliente Skyaweb, ecommerce desde cero" width="400" height="400" loading="lazy" />
             </div>
-          </div>
+          </a>
           <div class="case-info">
-            <span class="case-sector">Atención al cliente</span>
+            <span class="case-sector">Ecommerce</span>
             <h3 id="case-2-title">Atiende Company</h3>
-            <p>Automatizaron su gestión de consultas y redujeron el tiempo de respuesta de horas a segundos.</p>
+            <p>Ecommerce desarrollado desde cero que llevó su facturación de 0 a 100 gracias al diseño de alta conversión y la solidez técnica.</p>
             <div class="case-metric">
-              <span class="metric-big">-90%</span>
-              <span class="metric-desc">tiempo de respuesta</span>
+              <span class="metric-big">0 → 100</span>
+              <span class="metric-desc">facturación desde cero</span>
             </div>
           </div>
         </article>
 
-        <!-- Video Case 3 — HomeStaging Valencia -->
+        <!-- Case 3 — HomeStaging Valencia -->
         <article class="case-card reveal" role="listitem" aria-labelledby="case-3-title">
-          <div class="case-video-thumb" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ" role="button"
-            tabindex="0" aria-label="Ver caso de éxito: HomeStaging Valencia">
+          <a class="case-video-thumb" href="https://homestagingvalencia.com" target="_blank" rel="noopener noreferrer"
+            aria-label="Visitar web de HomeStaging Valencia">
             <div class="thumb-overlay" aria-hidden="true">
               <div class="play-btn">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <polygon points="5 3 19 12 5 21 5 3" />
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
                 </svg>
               </div>
             </div>
             <div class="thumb-placeholder" aria-hidden="true">
-              <img src="./images/cropped-Logo-HomeStagingValencia-1.png" alt="Logo HomeStaging Valencia" width="400" height="400" />
+              <img src="./images/cropped-Logo-HomeStagingValencia-1.png" alt="HomeStaging Valencia — cliente Skyaweb, web SEO orgánico +280% leads" width="400" height="400" loading="lazy" />
             </div>
-          </div>
+          </a>
           <div class="case-info">
             <span class="case-sector">Inmobiliaria · Home Staging</span>
             <h3 id="case-3-title">HomeStaging Valencia</h3>
-            <p>Captaron nuevos propietarios con una web de alta conversión y agente IA que cualifica interesados 24/7.
-            </p>
+            <p>Web desde cero con SEO orgánico avanzado. La IA la recomienda directamente, generando un +280% de nuevos leads y alcance de marca.</p>
             <div class="case-metric">
-              <span class="metric-big">+260%</span>
-              <span class="metric-desc">nuevos clientes captados</span>
+              <span class="metric-big">+280%</span>
+              <span class="metric-desc">nuevos leads y alcance</span>
+            </div>
+          </div>
+        </article>
+
+         <!-- Case 1 — Carscape AI -->
+        <article class="case-card reveal" role="listitem" aria-labelledby="case-1-title">
+          <a class="case-video-thumb" href="https://carscapeai.com" target="_blank" rel="noopener noreferrer"
+            aria-label="Visitar web de Carscape AI">
+            <div class="thumb-overlay" aria-hidden="true">
+              <div class="play-btn">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+              </div>
+            </div>
+            <div class="thumb-placeholder" aria-hidden="true">
+              <img src="./images/carscapeai.png" alt="Carscape AI — cliente Skyaweb, migración y rediseño web" width="400" height="400" loading="lazy" />
+            </div>
+          </a>
+          <div class="case-info">
+            <span class="case-sector">Marketing Digital · Automoción</span>
+            <h3 id="case-1-title">Carscape AI</h3>
+            <p>Diseño y desarrollo de una web con IA para el sector de la automoción, incrementando los leads en un 20%.</p>
+            <div class="case-metric">
+              <span class="metric-big">20%</span>
+              <span class="metric-desc">Incremento de leads</span>
             </div>
           </div>
         </article>
@@ -544,16 +886,13 @@
 
       </div>
 
-      <!-- Upload info for client -->
       <div class="cases-note reveal">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
           aria-hidden="true">
           <circle cx="12" cy="12" r="10" />
-          <path d="M12 8v4M12 16h.01" />
+          <path d="M5 12h14M12 5l7 7-7 7" />
         </svg>
-        <span>Para subir nuevos vídeos de casos de éxito, contacta con <a
-            href="mailto:contacto@skyaweb.com">contacto@skyaweb.com</a> o edita el archivo <code>index.html</code> →
-          sección <code>#casos-exito</code>.</span>
+        <span>¿Quieres ser el próximo caso de éxito? <a href="#contacto">Habla con nosotros</a> y te hacemos una consulta gratuita.</span>
       </div>
     </div>
   </section>
@@ -662,8 +1001,7 @@
                 points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
             </svg>
           </div>
-          <p>"Desde que Skyaweb nos implementó el agente de IA, las solicitudes de presupuesto se han multiplicado.
-            Antes perdíamos clientes por no responder rápido. Ahora respondemos en segundos."</p>
+          <p>"Skyaweb migró y remodeló toda nuestra web. Los clientes llegan ahora directamente a donde tienen que llegar y el número de presupuestos solicitados se ha multiplicado por tres."</p>
           <footer>
             <div class="author-avatar" aria-hidden="true">AN</div>
             <div>
@@ -696,8 +1034,7 @@
                 points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
             </svg>
           </div>
-          <p>"La automatización que nos montó Skyaweb transformó cómo gestionamos las consultas. El tiempo de respuesta
-            bajó de horas a segundos. Nuestros clientes lo notan y lo agradecen."</p>
+          <p>"Pasamos de no tener ningún ecommerce a facturar de verdad. Skyaweb nos construyó la tienda desde cero con un diseño que convierte y todo funcionó desde el primer día."</p>
           <footer>
             <div class="author-avatar" aria-hidden="true">AC</div>
             <div>
@@ -730,8 +1067,7 @@
                 points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
             </svg>
           </div>
-          <p>"Con la web y el agente IA de Skyaweb captamos propietarios que antes nos costaba semanas conseguir. Ahora
-            nos llegan directamente y ya vienen cualificados. Increíble."</p>
+          <p>"Nos hicieron la web desde cero con un SEO increíble. Empezamos a aparecer cuando los clientes preguntaban a la IA y eso se convirtió en un +280% de leads nuevos. Nunca habíamos tenido tanto alcance."</p>
           <footer>
             <div class="author-avatar" aria-hidden="true">HV</div>
             <div>
@@ -847,6 +1183,38 @@
           </div>
         </div>
 
+        <div class="faq-item reveal" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-7-answer">
+            <span>¿Qué es el SEO para IA y cómo ayuda a mi empresa a aparecer en ChatGPT?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </button>
+          <div class="faq-answer" id="faq-7-answer" role="region">
+            <p>El SEO para IA —también llamado GEO (Generative Engine Optimization)— es la disciplina de optimizar tu
+              presencia digital para que ChatGPT, Gemini o Perplexity recomienden tu empresa cuando alguien pregunta
+              sobre tu sector. En Skyaweb trabajamos la arquitectura de contenido, el marcado estructurado y la
+              autoridad temática para que tu negocio sea la respuesta que da la IA a tus potenciales clientes.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-8-answer">
+            <span>¿En qué consiste la automatización empresarial con IA?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </button>
+          <div class="faq-answer" id="faq-8-answer" role="region">
+            <p>La automatización empresarial con IA conecta todos los procesos de tu negocio —captación de leads,
+              seguimiento, emails, cualificación y atención al cliente— en un sistema que trabaja solo. Skyaweb
+              implementa flujos de IA que ejecutan estas tareas en tiempo real, reduciendo el trabajo manual hasta un
+              80% y permitiendo a tu equipo centrarse en cerrar ventas.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -872,6 +1240,62 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════
+       PRESENCIA LOCAL ZARAGOZA
+  ═══════════════════════════════════════════════ -->
+  <section class="results-band" id="zaragoza" aria-labelledby="local-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Agencia local · Zaragoza</span>
+        <h2 id="local-heading" class="section-title">
+          La agencia de IA y desarrollo web<br />de referencia en <span class="gradient-text">Zaragoza</span>
+        </h2>
+        <p class="section-subtitle">
+          Trabajamos con PYMEs y empresas de toda Zaragoza y provincia. Entendemos el mercado local aragonés
+          y llevamos clientes hasta tu negocio, tanto online como en tu barrio.
+        </p>
+      </div>
+
+      <div class="results-grid reveal">
+        <div class="result-item">
+          <span class="result-number" data-target="120">0</span><span class="result-suffix">+</span>
+          <span class="result-label">PYMEs de Zaragoza atendidas</span>
+        </div>
+        <div class="result-item">
+          <span class="result-number" data-target="5">0</span><span class="result-suffix">★</span>
+          <span class="result-label">Valoración media de clientes</span>
+        </div>
+        <div class="result-item">
+          <span class="result-number" data-target="72">0</span><span class="result-suffix">h</span>
+          <span class="result-label">Para tener tu proyecto activo</span>
+        </div>
+        <div class="result-item">
+          <span class="result-number" data-target="3">0</span><span class="result-suffix">x</span>
+          <span class="result-label">ROI mínimo garantizado</span>
+        </div>
+      </div>
+
+      <div class="reveal" style="margin-top:32px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px 28px;">
+        <p style="font-size:15px;color:var(--text-2);line-height:1.8;margin:0;">
+          Atendemos negocios de <strong style="color:var(--text-1)">Centro</strong>,
+          <strong style="color:var(--text-1)">Delicias</strong>,
+          <strong style="color:var(--text-1)">Actur</strong>,
+          <strong style="color:var(--text-1)">Universidad</strong>,
+          <strong style="color:var(--text-1)">Las Fuentes</strong>,
+          <strong style="color:var(--text-1)">Casablanca</strong>,
+          <strong style="color:var(--text-1)">Oliver</strong>,
+          <strong style="color:var(--text-1)">Valdefierro</strong>,
+          <strong style="color:var(--text-1)">San José</strong>,
+          <strong style="color:var(--text-1)">Torrero-La Paz</strong>,
+          <strong style="color:var(--text-1)">Gran Vía</strong>
+          y toda la <strong style="color:var(--text-1)">provincia de Zaragoza</strong>.
+          También trabajamos con empresas de <strong style="color:var(--text-1)">Huesca</strong>,
+          <strong style="color:var(--text-1)">Teruel</strong> y el resto de <strong style="color:var(--text-1)">Aragón</strong>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
        CONTACTO
   ═══════════════════════════════════════════════ -->
   <section class="contact" id="contacto" aria-labelledby="contact-heading">
@@ -882,12 +1306,12 @@
           Hablemos de tu<br /><span class="gradient-text">crecimiento</span>
         </h2>
         <p class="section-subtitle">
-          Cuéntanos tu negocio y te decimos exactamente cómo podemos ayudarte.
-          Primera consulta sin coste.
+          Cuéntanos tu proyecto y te respondemos en menos de 24 h.
         </p>
       </div>
 
-      <div class="contact-grid">
+      <div>
+        <div class="contact-grid">
 
         <div class="contact-info reveal">
           <div class="info-card">
@@ -1000,7 +1424,8 @@
           </div>
         </form>
 
-      </div>
+        </div><!-- end contact-grid -->
+      </div><!-- end panel-form -->
     </div>
   </section>
 
@@ -1012,7 +1437,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="#inicio" class="nav-logo" aria-label="Skyaweb inicio">
-            <img src="./images/skyaweb-blanco-sin-fondo.png" alt="Logo Skyaweb" width="150" height="150" />
+            <img src="./images/skyaweb-blanco-sin-fondo.png" alt="Skyaweb — Agencia de IA para PYMEs en España" width="150" height="150" />
           </a>
           <p>Agencia especializada en inteligencia artificial para empresas y PYMEs que quieren crecer más rápido.</p>
           <address>
@@ -1024,10 +1449,10 @@
         <nav class="footer-nav" aria-label="Navegación del pie de página">
           <h3>Servicios</h3>
           <ul role="list">
-            <li><a href="#servicios">Agentes de IA</a></li>
-            <li><a href="#servicios">Webs de conversión</a></li>
-            <li><a href="#servicios">Automatización marketing</a></li>
-            <li><a href="#proceso">Nuestro proceso</a></li>
+            <li><a href="/agentes-ia">Agentes de IA</a></li>
+            <li><a href="/webs-conversion">Desarrollo Web</a></li>
+            <li><a href="/automatizacion">Automatización</a></li>
+            <li><a href="/seo">SEO y Posicionamiento</a></li>
           </ul>
         </nav>
 
@@ -1035,7 +1460,7 @@
           <h3>Empresa</h3>
           <ul role="list">
             <li><a href="#casos-exito">Casos de éxito</a></li>
-            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="/sobre-nosotros">Nosotros</a></li>
             <li><a href="#faq">Preguntas frecuentes</a></li>
             <li><a href="#contacto">Contacto</a></li>
           </ul>
@@ -1051,9 +1476,9 @@
       <div class="footer-bottom">
         <p>© <span id="year"></span> Skyaweb. Todos los derechos reservados.</p>
         <div class="footer-links">
-          <a href="#">Política de privacidad</a>
-          <a href="#">Aviso legal</a>
-          <a href="#">Cookies</a>
+          <a href="/privacidad">Política de privacidad</a>
+          <a href="/aviso-legal">Aviso legal</a>
+          <a href="/cookies">Política de cookies</a>
         </div>
       </div>
     </div>
@@ -1071,8 +1496,6 @@
     <span class="whatsapp-pulse" aria-hidden="true"></span>
   </a>
 
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script>emailjs.init({ publicKey: '29OcspJ-d3megwpvZ' });</script>
   <script src="script.js"></script>
 </body>
 

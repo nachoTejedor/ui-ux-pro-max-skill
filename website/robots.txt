@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://skyaweb.com/sitemap_index.xml
+Sitemap: https://skyaweb.com/sitemap.xml

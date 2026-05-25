@@ -156,6 +156,51 @@ document.querySelectorAll('.mobile-link').forEach(link => {
   canvas.addEventListener('mouseleave', () => { mouse.x = null; mouse.y = null; });
 })();
 
+/* ── HERO PARALLAX + SPOTLIGHT ───────────────── */
+(function initHeroEffects() {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) return;
+
+  const hero    = document.getElementById('inicio');
+  const content = hero?.querySelector('.hero-content');
+  const badge   = hero?.querySelector('.hero-badge');
+  if (!hero || !content) return;
+
+  /* Spotlight cursor */
+  const spotlight = document.createElement('div');
+  spotlight.className = 'hero-spotlight';
+  hero.appendChild(spotlight);
+
+  hero.addEventListener('mousemove', e => {
+    const rect = hero.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const nx = (x / rect.width  - 0.5) * 2;
+    const ny = (y / rect.height - 0.5) * 2;
+
+    /* Spotlight */
+    spotlight.style.left    = x + 'px';
+    spotlight.style.top     = y + 'px';
+    spotlight.style.opacity = '1';
+
+    /* Parallax — content moves opposite to cursor, badge a bit more */
+    content.style.transform = `translate(${nx * -10}px, ${ny * -6}px)`;
+    if (badge) badge.style.transform = `translate(${nx * -16}px, ${ny * -10}px)`;
+  }, { passive: true });
+
+  hero.addEventListener('mouseleave', () => {
+    spotlight.style.opacity = '0';
+    content.style.transition = 'transform 900ms var(--ease-out)';
+    if (badge) badge.style.transition = 'transform 900ms var(--ease-out)';
+    content.style.transform = 'translate(0, 0)';
+    if (badge) badge.style.transform = 'translate(0, 0)';
+    setTimeout(() => {
+      content.style.transition = '';
+      if (badge) badge.style.transition = '';
+    }, 900);
+  });
+})();
+
 /* ── TYPEWRITER ──────────────────────────────── */
 (function initTypewriter() {
   const el = document.getElementById('typewriter');
@@ -277,7 +322,7 @@ document.querySelectorAll('.faq-question').forEach(btn => {
     if (lastFocus) lastFocus.focus();
   }
 
-  document.querySelectorAll('.case-video-thumb').forEach(thumb => {
+  document.querySelectorAll('.case-video-thumb[data-video]').forEach(thumb => {
     const handler = () => openModal(thumb.dataset.video);
     thumb.addEventListener('click', handler);
     thumb.addEventListener('keydown', e => {
@@ -351,15 +396,31 @@ document.querySelectorAll('.faq-question').forEach(btn => {
       Enviando...
     `;
 
+    const interesLabels = {
+      'agente-ia':      'Agente de IA para captar clientes',
+      'web-conversion': 'Web de alta conversión',
+      'automatizacion': 'Automatización de marketing',
+      'todo':           'Todo lo anterior',
+      'otro':           'Duda específica',
+    };
+
     try {
-      await emailjs.send('service_adja48a', 'template_acl1weh', {
-        nombre: form.nombre.value,
-        empresa: form.empresa.value,
-        email: form.email.value,
-        telefono: form.telefono.value,
-        interes: form.interes.value,
-        mensaje: form.mensaje.value,
+      const res = await fetch('https://formsubmit.co/ajax/contacto@skyaweb.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          _subject:  `Nuevo contacto: ${interesLabels[form.interes.value] || form.interes.value} — ${form.nombre.value}`,
+          _template: 'table',
+          _captcha:  'false',
+          Nombre:    form.nombre.value,
+          Empresa:   form.empresa.value || '—',
+          Email:     form.email.value,
+          Teléfono:  form.telefono.value || '—',
+          Interés:   interesLabels[form.interes.value] || form.interes.value,
+          Mensaje:   form.mensaje.value || '—',
+        }),
       });
+      if (!res.ok) throw new Error('server error');
       form.querySelectorAll('input, select, textarea, button').forEach(el => el.disabled = true);
       success.removeAttribute('hidden');
       success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -384,13 +445,116 @@ document.querySelectorAll('.faq-question').forEach(btn => {
 /* ── SMOOTH ANCHOR SCROLLING ─────────────────── */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
+    const hash = a.getAttribute('href');
+    if (!hash || hash === '#') return;
+    let target;
+    try { target = document.querySelector(hash); } catch (_) { return; }
     if (!target) return;
     e.preventDefault();
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    history.pushState(null, '', hash);
   });
 });
 
 /* ── FOOTER YEAR ─────────────────────────────── */
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+/* ── COOKIE CONSENT ──────────────────────────── */
+(function initCookieConsent() {
+  const CONSENT_KEY = 'cookie_consent';
+  const CONSENT_VERSION = '1';
+
+  function getConsent() {
+    try { return JSON.parse(localStorage.getItem(CONSENT_KEY)); } catch (_) { return null; }
+  }
+
+  function setConsent(accepted) {
+    const data = { accepted, version: CONSENT_VERSION, date: new Date().toISOString() };
+    localStorage.setItem(CONSENT_KEY, JSON.stringify(data));
+    document.cookie = 'cookie_consent=' + (accepted ? 'accepted' : 'rejected') + '; max-age=31536000; path=/; SameSite=Lax';
+  }
+
+  function loadAnalytics() {
+    if (document.getElementById('ga-script')) return;
+    const s = document.createElement('script');
+    s.id = 'ga-script';
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-JECBD8LKHR';
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { window.dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-JECBD8LKHR', { anonymize_ip: true });
+  }
+
+  function loadAdsense() {
+    if (document.getElementById('adsense-script')) return;
+    const s = document.createElement('script');
+    s.id = 'adsense-script';
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7498469267704561';
+    document.head.appendChild(s);
+  }
+
+  function applyConsent(accepted) {
+    if (accepted) {
+      loadAnalytics();
+      loadAdsense();
+    }
+  }
+
+  function hideBanner(banner) {
+    banner.classList.remove('visible');
+    banner.addEventListener('transitionend', () => banner.remove(), { once: true });
+  }
+
+  function createBanner() {
+    const banner = document.createElement('div');
+    banner.className = 'cookie-banner';
+    banner.setAttribute('role', 'region');
+    banner.setAttribute('aria-label', 'Aviso de cookies');
+    banner.innerHTML = `
+      <div class="cookie-banner-inner">
+        <div class="cookie-banner-text">
+          <p>Usamos cookies propias y de terceros (Google Analytics y Google AdSense) para analizar el tráfico y mostrar publicidad personalizada. Consulta nuestra <a href="/cookies">política de cookies</a> y <a href="/privacidad">política de privacidad</a>.</p>
+        </div>
+        <div class="cookie-banner-actions">
+          <button class="cookie-btn-reject" id="cookie-reject">Solo esenciales</button>
+          <button class="cookie-btn-accept" id="cookie-accept">Aceptar todas</button>
+        </div>
+      </div>`;
+    document.body.appendChild(banner);
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => banner.classList.add('visible'));
+    });
+
+    banner.querySelector('#cookie-accept').addEventListener('click', () => {
+      setConsent(true);
+      applyConsent(true);
+      hideBanner(banner);
+    });
+
+    banner.querySelector('#cookie-reject').addEventListener('click', () => {
+      setConsent(false);
+      hideBanner(banner);
+    });
+  }
+
+  window.openCookieSettings = function () {
+    const existing = document.querySelector('.cookie-banner');
+    if (existing) return;
+    localStorage.removeItem(CONSENT_KEY);
+    createBanner();
+  };
+
+  const consent = getConsent();
+  if (consent === null) {
+    createBanner();
+  } else if (consent.accepted) {
+    applyConsent(true);
+  }
+})();
