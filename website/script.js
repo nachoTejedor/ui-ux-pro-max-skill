@@ -161,9 +161,9 @@ document.querySelectorAll('.mobile-link').forEach(link => {
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (prefersReduced) return;
 
-  const hero    = document.getElementById('inicio');
+  const hero = document.getElementById('inicio');
   const content = hero?.querySelector('.hero-content');
-  const badge   = hero?.querySelector('.hero-badge');
+  const badge = hero?.querySelector('.hero-badge');
   if (!hero || !content) return;
 
   /* Spotlight cursor */
@@ -175,12 +175,12 @@ document.querySelectorAll('.mobile-link').forEach(link => {
     const rect = hero.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-    const nx = (x / rect.width  - 0.5) * 2;
+    const nx = (x / rect.width - 0.5) * 2;
     const ny = (y / rect.height - 0.5) * 2;
 
     /* Spotlight */
-    spotlight.style.left    = x + 'px';
-    spotlight.style.top     = y + 'px';
+    spotlight.style.left = x + 'px';
+    spotlight.style.top = y + 'px';
     spotlight.style.opacity = '1';
 
     /* Parallax — content moves opposite to cursor, badge a bit more */
@@ -206,7 +206,7 @@ document.querySelectorAll('.mobile-link').forEach(link => {
   const el = document.getElementById('typewriter');
   if (!el) return;
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const phrases = ['Con Inteligencia Artificial.', 'Sin parar 24/7.', 'Para tu PYME.', 'Empieza hoy.'];
+  const phrases = ['IA que capta clientes 24/7.', 'En Google desde el día 1.', 'Webs que convierten de verdad.', 'Resultados en 72 horas.'];
   let i = 0, j = 0, deleting = false;
 
   function tick() {
@@ -397,11 +397,11 @@ document.querySelectorAll('.faq-question').forEach(btn => {
     `;
 
     const interesLabels = {
-      'agente-ia':      'Agente de IA para captar clientes',
+      'agente-ia': 'Agente de IA para captar clientes',
       'web-conversion': 'Web de alta conversión',
       'automatizacion': 'Automatización de marketing',
-      'todo':           'Todo lo anterior',
-      'otro':           'Duda específica',
+      'todo': 'Todo lo anterior',
+      'otro': 'Duda específica',
     };
 
     try {
@@ -409,9 +409,9 @@ document.querySelectorAll('.faq-question').forEach(btn => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({
-          _subject:  `Nuevo contacto: ${interesLabels[form.interes.value] || form.interes.value} — ${form.nombre.value}`,
+          _subject: `Nuevo contacto: ${interesLabels[form.interes.value] || form.interes.value} — ${form.nombre.value}`,
           _template: 'table',
-          _captcha:  'false',
+          _captcha: 'false',
           Nombre:    form.nombre.value,
           Empresa:   form.empresa.value || '—',
           Email:     form.email.value,
@@ -424,11 +424,16 @@ document.querySelectorAll('.faq-question').forEach(btn => {
       form.querySelectorAll('input, select, textarea, button').forEach(el => el.disabled = true);
       success.removeAttribute('hidden');
       success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'generate_lead', { event_category: 'contact_form', event_label: form.interes?.value });
+        // Para Google Ads: sustituye AW-XXXXXXXXX/XXXXXXXXXX por tu ID de conversión real
+        // gtag('event', 'conversion', { send_to: 'AW-XXXXXXXXX/XXXXXXXXXX' });
+      }
     } catch (_err) {
       submit.disabled = false;
       submit.innerHTML = `
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
-        Enviar y recibir consulta gratuita
+        Quiero mi auditoría SEO gratuita
       `;
       let errMsg = document.getElementById('send-error');
       if (!errMsg) {
@@ -437,7 +442,7 @@ document.querySelectorAll('.faq-question').forEach(btn => {
         errMsg.style.cssText = 'color:#ef4444;text-align:center;margin-top:1rem;font-size:.875rem;';
         form.appendChild(errMsg);
       }
-      errMsg.textContent = 'Error al enviar el mensaje. Escríbenos a contacto@skyaweb.com';
+      errMsg.textContent = 'Error al enviar. Escríbenos directamente por WhatsApp o a contacto@skyaweb.com';
     }
   });
 })();
@@ -459,6 +464,17 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 /* ── FOOTER YEAR ─────────────────────────────── */
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+/* ── WHATSAPP CLICK TRACKING ─────────────────── */
+document.querySelectorAll('a[href*="wa.me"]').forEach(el => {
+  el.addEventListener('click', () => {
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'whatsapp_click', { event_category: 'whatsapp_lead', event_label: el.className });
+      // Para Google Ads: sustituye AW-XXXXXXXXX/XXXXXXXXXX por tu ID de conversión real
+      // gtag('event', 'conversion', { send_to: 'AW-XXXXXXXXX/XXXXXXXXXX' });
+    }
+  });
+});
 
 /* ── COOKIE CONSENT ──────────────────────────── */
 (function initCookieConsent() {

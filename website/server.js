@@ -68,6 +68,9 @@ app.use(express.static(__dirname));
 /* Redirect /website and /website/ to / */
 app.get(['/website', '/website/'], (_req, res) => res.redirect(301, '/'));
 
+/* Favicon: browsers and Google check /favicon.ico automatically */
+app.get('/favicon.ico', (_req, res) => res.redirect(301, '/images/cropped-skyaweb-sin-fondo.png'));
+
 /* ── GET /api/availability?date=YYYY-MM-DD ───────
    Returns which time slots are already taken in Google Calendar. */
 app.get('/api/availability', async (req, res) => {
@@ -261,6 +264,9 @@ pages.forEach(page => {
 const extraPages = [
   { url: '/seo',                     file: 'seo.html' },
   { url: '/sobre-nosotros',          file: 'sobre-nosotros.html' },
+  { url: '/privacidad',              file: 'privacidad.html' },
+  { url: '/aviso-legal',             file: 'aviso-legal.html' },
+  { url: '/cookies',                 file: 'cookies.html' },
   { url: '/zaragoza/agencia-seo',    file: 'zaragoza-agencia-seo.html' },
   { url: '/zaragoza/desarrollo-web', file: 'zaragoza-desarrollo-web.html' },
   { url: '/zaragoza/agencia-ia',     file: 'zaragoza-agencia-ia.html' },
