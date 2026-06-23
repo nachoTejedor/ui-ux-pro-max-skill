@@ -476,6 +476,62 @@ document.querySelectorAll('a[href*="wa.me"]').forEach(el => {
   });
 });
 
+/* ── CASES SLIDER ───────────────────────────── */
+(function initCasesSlider() {
+  const slider = document.getElementById('cases-slider');
+  const track  = document.getElementById('cases-track');
+  const prev   = document.getElementById('slider-prev');
+  const next   = document.getElementById('slider-next');
+  const dots   = document.querySelectorAll('.slider-dot');
+  if (!track) return;
+
+  const total = track.children.length;
+  let current = 0;
+  let timer;
+  let touchStartX = 0;
+
+  function goTo(i) {
+    current = (i + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, idx) => {
+      const active = idx === current;
+      d.classList.toggle('active', active);
+      d.setAttribute('aria-selected', active ? 'true' : 'false');
+    });
+  }
+
+  function startAuto() { timer = setInterval(() => goTo(current + 1), 5000); }
+  function stopAuto()  { clearInterval(timer); }
+  function resetAuto() { stopAuto(); startAuto(); }
+
+  next?.addEventListener('click', () => { goTo(current + 1); resetAuto(); });
+  prev?.addEventListener('click', () => { goTo(current - 1); resetAuto(); });
+
+  dots.forEach(d => d.addEventListener('click', () => {
+    goTo(+d.dataset.slide); resetAuto();
+  }));
+
+  slider?.addEventListener('mouseenter', stopAuto);
+  slider?.addEventListener('mouseleave', startAuto);
+
+  slider?.addEventListener('touchstart', e => {
+    touchStartX = e.touches[0].clientX;
+  }, { passive: true });
+
+  slider?.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 48) { dx < 0 ? goTo(current + 1) : goTo(current - 1); resetAuto(); }
+  }, { passive: true });
+
+  /* Keyboard: left/right arrows when slider is focused */
+  slider?.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') { goTo(current + 1); resetAuto(); }
+    if (e.key === 'ArrowLeft')  { goTo(current - 1); resetAuto(); }
+  });
+
+  startAuto();
+})();
+
 /* ── COOKIE CONSENT ──────────────────────────── */
 (function initCookieConsent() {
   const CONSENT_KEY = 'cookie_consent';
