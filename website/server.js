@@ -65,6 +65,16 @@ app.use((req, res, next) => {
 app.use(express.json());
 app.use(express.static(__dirname));
 
+/* Explicit text/plain routes required by Google crawler */
+app.get('/ads.txt', (_req, res) => {
+  res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+  res.sendFile(path.join(__dirname, 'ads.txt'));
+});
+app.get('/robots.txt', (_req, res) => {
+  res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+  res.sendFile(path.join(__dirname, 'robots.txt'));
+});
+
 /* Redirect /website and /website/ to / */
 app.get(['/website', '/website/'], (_req, res) => res.redirect(301, '/'));
 
