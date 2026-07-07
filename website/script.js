@@ -278,6 +278,54 @@ document.querySelectorAll('.mobile-link').forEach(link => {
   document.querySelectorAll('[data-target]').forEach(el => observer.observe(el));
 })();
 
+/* ── HOURS LIVE COUNTER (Automatización) ─────── */
+(function initHoursCounter() {
+  const el = document.getElementById('hoursCounter');
+  if (!el) return;
+
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const base = parseInt(el.dataset.target, 10) || 0;
+  let current = 0;
+
+  function render(n) {
+    el.textContent = Math.round(n).toLocaleString('es-ES');
+  }
+
+  function startLiveTick() {
+    current = base;
+    render(current);
+    if (prefersReduced) return;
+    setInterval(() => {
+      current += Math.random() * 0.8 + 0.3;
+      render(current);
+    }, 2200);
+  }
+
+  function countUp(target, duration) {
+    if (prefersReduced) { startLiveTick(); return; }
+    const start = performance.now();
+    function step(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      render(eased * target);
+      if (progress < 1) requestAnimationFrame(step);
+      else startLiveTick();
+    }
+    requestAnimationFrame(step);
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      countUp(base, 1800);
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.5 });
+
+  observer.observe(el);
+})();
+
 /* ── FAQ ACCORDION ───────────────────────────── */
 document.querySelectorAll('.faq-question').forEach(btn => {
   btn.addEventListener('click', () => {

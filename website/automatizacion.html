@@ -30,7 +30,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/cropped-skyaweb-sin-fondo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@40,500;40,600;40,700;40,800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="pages.css" />
 </head>
@@ -77,9 +77,9 @@
 
   <section class="page-hero" aria-labelledby="ph3-heading">
     <div class="page-hero-grid" aria-hidden="true"></div>
-    <div class="page-hero-glow" aria-hidden="true" style="background:radial-gradient(ellipse,rgba(255,0,110,0.06) 0%,transparent 70%);"></div>
+    <div class="page-hero-glow" aria-hidden="true" style="background:radial-gradient(ellipse,rgba(255, 255, 255,0.06) 0%,transparent 70%);"></div>
     <div class="page-hero-content">
-      <div class="page-hero-badge" style="background:rgba(255,0,110,0.1);border-color:rgba(255,0,110,0.3);color:#ff4d94;">⚡ Automatización empresarial con IA</div>
+      <div class="page-hero-badge" style="background:rgba(255, 255, 255,0.1);border-color:rgba(255, 255, 255,0.3);color:#d9be7a;">⚡ Automatización empresarial con IA</div>
       <h1 id="ph3-heading">Automatización empresarial con IA:<br /><span class="gradient-text">tu negocio funcionando solo</span></h1>
       <p>Conectamos todos los procesos de tu empresa en un sistema de IA automatizado: el lead entra, recibe la comunicación exacta en el momento exacto y llega a ti listo para comprar.</p>
       <div class="page-hero-ctas">
@@ -94,6 +94,23 @@
         <div class="ph-stat"><span class="ph-stat-num">3x</span><span class="ph-stat-label">Más leads nurturizados</span></div>
         <div class="ph-stat"><span class="ph-stat-num">+60%</span><span class="ph-stat-label">Tasa de cierre</span></div>
       </div>
+    </div>
+  </section>
+
+  <!-- CONTADOR DE HORAS GANADAS -->
+  <section class="page-section hours-counter-section" aria-labelledby="hc-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">En tiempo real</span>
+        <h2 id="hc-heading" class="section-title">Tu asistente de IA<br /><span class="gradient-text">nunca deja de trabajar para ti</span></h2>
+        <p class="section-subtitle">Así se acumulan las horas que recuperas cuando la IA responde, cualifica y hace seguimiento de tus leads — 24 horas al día, 7 días a la semana.</p>
+      </div>
+      <div class="hours-counter-card reveal">
+        <div class="hours-counter-live"><span class="badge-dot" aria-hidden="true"></span>Contando en tiempo real</div>
+        <div class="hours-counter-value" id="hoursCounter" data-target="1248" aria-live="polite">0</div>
+        <div class="hours-counter-label">horas recuperadas al mes gracias a tu asistente de IA</div>
+      </div>
+      <p class="hours-counter-note">*Estimación ilustrativa basada en clientes que automatizan tareas de atención y seguimiento con Skyaweb (~4h/día recuperadas de media por negocio).</p>
     </div>
   </section>
 
@@ -115,21 +132,21 @@
               <div><div style="font-size:13px;font-weight:600;">Lead entra en tu web</div><div style="font-size:12px;color:var(--text-3);">Rellena el formulario</div></div>
               <div style="margin-left:auto;font-size:12px;color:#22c55e;">✓ Automático</div>
             </div>
-            <div style="width:1px;height:16px;background:linear-gradient(to bottom,var(--border),var(--cyan));margin-left:30px;"></div>
-            <div style="padding:16px 20px;background:var(--bg-card);border:1px solid rgba(0,212,255,0.2);border-radius:var(--radius-md);display:flex;align-items:center;gap:14px;">
+            <div style="width:1px;height:16px;background:linear-gradient(to bottom,var(--border),var(--text-2));margin-left:30px;"></div>
+            <div style="padding:16px 20px;background:var(--bg-card);border:1px solid rgba(255, 255, 255,0.2);border-radius:var(--radius-md);display:flex;align-items:center;gap:14px;">
               <div style="width:36px;height:36px;background:var(--cyan-dim);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--cyan);font-size:14px;font-weight:700;flex-shrink:0;">2</div>
               <div><div style="font-size:13px;font-weight:600;">Recibe email de bienvenida</div><div style="font-size:12px;color:var(--text-3);">En menos de 5 minutos</div></div>
               <div style="margin-left:auto;font-size:12px;color:#22c55e;">✓ Automático</div>
             </div>
-            <div style="width:1px;height:16px;background:linear-gradient(to bottom,var(--cyan),var(--purple));margin-left:30px;"></div>
-            <div style="padding:16px 20px;background:var(--bg-card);border:1px solid rgba(123,47,255,0.2);border-radius:var(--radius-md);display:flex;align-items:center;gap:14px;">
-              <div style="width:36px;height:36px;background:var(--purple-dim);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#a855f7;font-size:14px;font-weight:700;flex-shrink:0;">3</div>
+            <div style="width:1px;height:16px;background:linear-gradient(to bottom,var(--border),var(--text-2));margin-left:30px;"></div>
+            <div style="padding:16px 20px;background:var(--bg-card);border:1px solid rgba(255, 255, 255,0.2);border-radius:var(--radius-md);display:flex;align-items:center;gap:14px;">
+              <div style="width:36px;height:36px;background:var(--purple-dim);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#d9be7a;font-size:14px;font-weight:700;flex-shrink:0;">3</div>
               <div><div style="font-size:13px;font-weight:600;">Secuencia de nurturing</div><div style="font-size:12px;color:var(--text-3);">Emails + WhatsApp según comportamiento</div></div>
               <div style="margin-left:auto;font-size:12px;color:#22c55e;">✓ Automático</div>
             </div>
-            <div style="width:1px;height:16px;background:linear-gradient(to bottom,var(--purple),var(--magenta));margin-left:30px;"></div>
-            <div style="padding:16px 20px;background:linear-gradient(135deg,rgba(0,212,255,0.06),rgba(123,47,255,0.06));border:1px solid rgba(0,212,255,0.3);border-radius:var(--radius-md);display:flex;align-items:center;gap:14px;">
-              <div style="width:36px;height:36px;background:linear-gradient(135deg,var(--cyan),var(--purple));border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;flex-shrink:0;">💰</div>
+            <div style="width:1px;height:16px;background:linear-gradient(to bottom,var(--border),var(--text-2));margin-left:30px;"></div>
+            <div style="padding:16px 20px;background:linear-gradient(135deg,rgba(255, 255, 255,0.06),rgba(255, 255, 255,0.06));border:1px solid rgba(255, 255, 255,0.3);border-radius:var(--radius-md);display:flex;align-items:center;gap:14px;">
+              <div style="width:36px;height:36px;background:var(--text-1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#1a1408;font-size:16px;flex-shrink:0;">💰</div>
               <div><div style="font-size:13px;font-weight:700;color:var(--text-1);">Llega listo para comprar</div><div style="font-size:12px;color:var(--text-3);">Tu equipo solo cierra</div></div>
               <div style="margin-left:auto;font-size:12px;color:var(--cyan);font-weight:600;">Resultado</div>
             </div>
