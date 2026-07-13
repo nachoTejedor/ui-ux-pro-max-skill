@@ -284,6 +284,22 @@
   box-shadow: 0 32px 80px rgba(0,0,0,0.4);
 }
 
+/* ── FOUNDER PHOTO (fallback color hasta subir la foto real) ── */
+.founder-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: var(--text-1);
+  background-image: url('/images/nacho-tejedor.jpg');
+  background-size: cover;
+  background-position: center;
+  border: 2px solid var(--border-h);
+  flex-shrink: 0;
+}
+@media (max-width: 480px) {
+  .founder-photo { width: 96px; height: 96px; }
+}
+
 .mockup-bar {
   display: flex;
   align-items: center;

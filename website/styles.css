@@ -1477,6 +1477,45 @@ body {
   height: 100%;
 }
 
+/* ── FOUNDER TEASER ──────────────────────────── */
+.founder-teaser {
+  padding: 80px 0;
+}
+.founder-teaser-inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+.founder-photo-lg {
+  width: 120px;
+  height: 120px;
+}
+.founder-teaser-text .section-tag { margin-bottom: 12px; }
+.founder-teaser-text h2 {
+  font-family: var(--font-head);
+  font-size: clamp(1.3rem, 2.6vw, 1.8rem);
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 14px;
+}
+.founder-teaser-text p {
+  font-size: 15px;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 700px) {
+  .founder-teaser-inner { flex-direction: column; text-align: center; padding: 32px 24px; }
+  .founder-teaser-text a.hero-link { justify-content: center; }
+}
+
 /* ── TECH ────────────────────────────────────── */
 .tech {
   padding: 100px 0;
@@ -3048,6 +3087,27 @@ a.info-value:hover { color: var(--cyan); }
 .btn-whatsapp:active { transform: translateY(0); }
 .btn-whatsapp:focus-visible { outline: 2px solid #25d366; outline-offset: 3px; }
 .btn-whatsapp.btn-large { padding: 18px 36px; font-size: 1.05rem; }
+
+/* ═══════════════════════════════════════════════
+   HERO TRUST LINE (sin permanencia)
+   ═══════════════════════════════════════════════ */
+.hero-trust-line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px 22px;
+  margin-top: 20px;
+}
+.hero-trust-line span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-2);
+}
+.hero-trust-line svg { color: #22c55e; flex-shrink: 0; }
 
 /* ═══════════════════════════════════════════════
    HERO CTA SECONDARY LINK

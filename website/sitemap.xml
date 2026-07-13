@@ -43,6 +43,49 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Páginas sectoriales -->
+  <url>
+    <loc>https://skyaweb.com/seo-inmobiliarias</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://skyaweb.com/seo-ecommerce</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://skyaweb.com/desarrollo-web-fabricacion</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://skyaweb.com/agencia-ia-automocion</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://skyaweb.com/agencia-ia-clinicas</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://skyaweb.com/agencia-ia-inmobiliarias</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Empresa -->
   <url>
     <loc>https://skyaweb.com/casos-exito</loc>
