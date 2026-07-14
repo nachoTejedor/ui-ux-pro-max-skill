@@ -207,10 +207,13 @@
 }
 
 .use-case-card {
+  display: block;
   padding: 28px;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
+  color: inherit;
+  text-decoration: none;
   transition: border-color 250ms, transform 250ms var(--ease-out), box-shadow 250ms;
 }
 .use-case-card:hover {
@@ -224,8 +227,10 @@
   font-family: var(--font-head);
   font-size: 17px;
   font-weight: 700;
+  color: var(--text-1);
   margin-bottom: 8px;
 }
+.use-case-card:hover h3 { color: var(--cyan); }
 .use-case-card p { font-size: 14px; color: var(--text-2); line-height: 1.6; }
 
 /* ── COMPARISON TABLE ────────────────────────── */
