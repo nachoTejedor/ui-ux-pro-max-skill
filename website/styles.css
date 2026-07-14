@@ -5,20 +5,23 @@
 
 /* ── TOKENS ─────────────────────────────────── */
 :root {
-  --bg:          #100e0c;
-  --bg-2:        #171412;
+  --bg:          #15181D;
+  --bg-2:        #1c2028;
   --bg-card:     rgba(255, 255, 255, 0.035);
   --bg-card-h:   rgba(255, 255, 255, 0.06);
 
-  --cyan:        #c9a24b;
-  --purple:      #e8cd8f;
-  --magenta:     #e8cd8f;
-  --cyan-dim:    rgba(255, 255, 255, 0.10);
-  --purple-dim:  rgba(255, 255, 255, 0.10);
+  --cyan:        #E8A33D;
+  --purple:      #F4B860;
+  --magenta:     #F4B860;
+  --cyan-dim:    rgba(232, 163, 61, 0.12);
+  --purple-dim:  rgba(232, 163, 61, 0.12);
+
+  --teal:        #4FD1C5;
+  --teal-dim:    rgba(79, 209, 197, 0.12);
 
   --text-1:      #f5f2ea;
-  --text-2:      #a39d8f;
-  --text-3:      #6e6858;
+  --text-2:      #a3a8b0;
+  --text-3:      #6b7078;
 
   --border:      rgba(255, 255, 255, 0.07);
   --border-h:    rgba(255, 255, 255, 0.35);
@@ -36,6 +39,7 @@
 
   --font-head:   'Fraunces', serif;
   --font-body:   'Inter', sans-serif;
+  --font-mono:   'JetBrains Mono', 'Space Mono', monospace;
 }
 
 /* ── RESET ───────────────────────────────────── */
@@ -58,7 +62,7 @@ body {
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
     radial-gradient(ellipse 1100px 700px at 12% -8%, rgba(255, 255, 255, 0.09), transparent 60%),
     radial-gradient(ellipse 900px 650px at 100% 15%, rgba(255, 255, 255, 0.06), transparent 60%),
-    linear-gradient(180deg, #161311 0%, #100e0c 45%, #0a0908 100%);
+    linear-gradient(180deg, #1c2028 0%, #15181D 45%, #0e1015 100%);
   background-repeat: repeat, no-repeat, no-repeat, no-repeat;
   background-size: 120px 120px, cover, cover, cover;
   background-attachment: fixed;
@@ -615,16 +619,13 @@ body {
 .stat-item:first-child { padding-left: 0; }
 
 .stat-number {
-  font-family: var(--font-head);
-  font-size: clamp(22px, 4vw, 36px);
-  font-weight: 800;
-  background: linear-gradient(135deg, var(--cyan), var(--purple));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-family: var(--font-mono);
+  font-size: clamp(20px, 3.6vw, 32px);
+  font-weight: 700;
+  color: var(--teal);
   line-height: 1;
 }
-.stat-suffix { font-size: 20px; font-weight: 700; color: var(--cyan); display: inline; }
+.stat-suffix { font-family: var(--font-mono); font-size: 18px; font-weight: 700; color: var(--teal); display: inline; }
 .stat-label { font-size: 12px; color: var(--text-3); margin-top: 4px; }
 
 .stat-divider {

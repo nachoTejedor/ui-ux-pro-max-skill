@@ -104,21 +104,21 @@
   <!-- Páginas locales Zaragoza -->
   <url>
     <loc>https://skyaweb.com/zaragoza/agencia-seo</loc>
-    <lastmod>2026-06-13</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://skyaweb.com/zaragoza/desarrollo-web</loc>
-    <lastmod>2026-06-13</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://skyaweb.com/zaragoza/agencia-ia</loc>
-    <lastmod>2026-06-13</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -126,9 +126,23 @@
   <!-- Páginas locales Valencia -->
   <url>
     <loc>https://skyaweb.com/valencia/agencia-seo</loc>
-    <lastmod>2026-06-13</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://skyaweb.com/valencia/agencia-ia</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://skyaweb.com/valencia/desarrollo-web</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
 </urlset>

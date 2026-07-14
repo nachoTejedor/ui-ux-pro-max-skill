@@ -97,13 +97,10 @@
   gap: 4px;
 }
 .ph-stat-num {
-  font-family: var(--font-head);
-  font-size: clamp(1.5rem, 4vw, 36px);
-  font-weight: 800;
-  background: linear-gradient(135deg, var(--cyan), var(--purple));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-family: var(--font-mono);
+  font-size: clamp(1.3rem, 3.6vw, 32px);
+  font-weight: 700;
+  color: var(--teal);
   line-height: 1;
 }
 .ph-stat-label { font-size: 13px; color: var(--text-3); }
@@ -284,13 +281,13 @@
   box-shadow: 0 32px 80px rgba(0,0,0,0.4);
 }
 
-/* ── FOUNDER PHOTO (fallback color hasta subir la foto real) ── */
+/* ── FOUNDER PHOTO ── */
 .founder-photo {
   width: 140px;
   height: 140px;
   border-radius: 50%;
   background-color: var(--text-1);
-  background-image: url('/images/nacho-tejedor.jpg');
+  background-image: url('/images/Imagen_linkedin_editada_americana_v2.png');
   background-size: cover;
   background-position: center;
   border: 2px solid var(--border-h);
@@ -555,13 +552,10 @@
   margin: 0 auto 16px;
 }
 .result-highlight .big-number {
-  font-family: var(--font-head);
-  font-size: clamp(2.5rem, 8vw, 64px);
-  font-weight: 800;
-  background: linear-gradient(135deg, var(--cyan), var(--purple));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-family: var(--font-mono);
+  font-size: clamp(2.2rem, 7vw, 58px);
+  font-weight: 700;
+  color: var(--teal);
   line-height: 1;
   margin-bottom: 8px;
   display: block;
@@ -583,27 +577,26 @@
   align-items: center;
   gap: 8px;
   padding: 6px 16px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: var(--teal-dim);
+  border: 1px solid rgba(79, 209, 197, 0.3);
   border-radius: 100px;
+  font-family: var(--font-mono);
   font-size: 12px;
   font-weight: 600;
-  color: var(--cyan);
+  color: var(--teal);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 28px;
 }
+.hours-counter-live .badge-dot { background: var(--teal); }
 
 .hours-counter-value {
-  font-family: var(--font-head);
-  font-size: clamp(3rem, 9vw, 5.5rem);
-  font-weight: 800;
-  background: linear-gradient(135deg, var(--cyan), var(--purple));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-family: var(--font-mono);
+  font-size: clamp(2.6rem, 8vw, 5rem);
+  font-weight: 700;
+  color: var(--teal);
   line-height: 1;
-  letter-spacing: -0.1px;
+  letter-spacing: -0.5px;
   font-variant-numeric: tabular-nums;
 }
 
@@ -896,10 +889,10 @@
   border-top: 1px solid var(--border);
 }
 .metric-big {
-  font-family: var(--font-head);
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: var(--cyan);
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--teal);
   line-height: 1;
 }
 .metric-desc { font-size: 12.5px; color: var(--text-3); }
@@ -976,7 +969,7 @@
   border-bottom: 1px solid var(--border);
 }
 .featured-metrics .metric-big { font-size: 2rem; }
-.metric-gold { color: var(--cyan); }
+.metric-gold { color: var(--teal); }
 .featured-link {
   display: inline-flex;
   align-items: center;
