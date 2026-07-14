@@ -457,24 +457,25 @@ document.querySelectorAll('.faq-question').forEach(btn => {
     const timeout = setTimeout(() => controller.abort(), 15000);
 
     try {
-      const res = await fetch('https://formsubmit.co/ajax/contacto@skyaweb.com', {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         signal: controller.signal,
         body: JSON.stringify({
-          _subject: `Nuevo contacto: ${interesLabels[form.interes.value] || form.interes.value} — ${form.nombre.value}`,
-          _template: 'table',
-          _captcha: 'false',
-          Nombre:    form.nombre.value,
-          Empresa:   form.empresa.value || '—',
-          Email:     form.email.value,
-          Teléfono:  form.telefono.value || '—',
-          Interés:   interesLabels[form.interes.value] || form.interes.value,
-          Mensaje:   form.mensaje.value || '—',
+          access_key: '7501a353-468f-4631-ad41-b23c481eea31',
+          subject:    `Nuevo contacto: ${interesLabels[form.interes.value] || form.interes.value} — ${form.nombre.value}`,
+          from_name:  'Formulario web Skyaweb',
+          Nombre:     form.nombre.value,
+          Empresa:    form.empresa.value || '—',
+          Email:      form.email.value,
+          Teléfono:   form.telefono.value || '—',
+          Interés:    interesLabels[form.interes.value] || form.interes.value,
+          Mensaje:    form.mensaje.value || '—',
         }),
       });
       clearTimeout(timeout);
-      if (!res.ok) throw new Error('server error');
+      const data = await res.json();
+      if (!res.ok || !data.success) throw new Error('server error');
       form.querySelectorAll('input, select, textarea, button').forEach(el => el.disabled = true);
       success.removeAttribute('hidden');
       success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
