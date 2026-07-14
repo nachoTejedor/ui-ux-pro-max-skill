@@ -235,13 +235,24 @@
 
 /* ── COMPARISON TABLE ────────────────────────── */
 .comparison-wrap {
+  position: relative;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
 }
 
+.comparison-scroll-hint {
+  display: none;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-3);
+  margin-top: 8px;
+}
+
 .comparison-table {
   width: 100%;
+  min-width: 560px;
   border-collapse: collapse;
   font-size: 15px;
 }
@@ -664,8 +675,9 @@
   .use-cases-grid { grid-template-columns: 1fr; gap: 16px; }
   .use-case-card { padding: 24px 20px; }
 
-  .comparison-table { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .comparison-table table { min-width: 540px; }
+  .comparison-table { min-width: 540px; font-size: 14px; }
+  .comparison-table th, .comparison-table td { padding: 14px 16px; }
+  .comparison-scroll-hint { display: block; }
 
   .feature-list { gap: 16px; }
   .feature-item { gap: 12px; }
@@ -698,7 +710,7 @@
 
   .use-case-card { padding: 20px 16px; }
 
-  .comparison-table table { min-width: 480px; font-size: 0.85rem; }
+  .comparison-table { min-width: 480px; font-size: 0.8rem; }
   .comparison-table th,
   .comparison-table td { padding: 10px 8px; }
 

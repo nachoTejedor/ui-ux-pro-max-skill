@@ -1914,6 +1914,7 @@ a.info-value:hover { color: var(--cyan); }
   gap: 48px;
   margin-bottom: 64px;
 }
+.footer-grid-5col { grid-template-columns: 1.8fr 1fr 1fr 1fr 1.1fr; gap: 40px; }
 
 .footer-brand { display: flex; flex-direction: column; gap: 16px; }
 .footer-brand .nav-logo { margin-bottom: 4px; }
@@ -2113,6 +2114,7 @@ a.info-value:hover { color: var(--cyan); }
   .form-row { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid-5col { grid-template-columns: 1fr 1fr; }
 
   .process-step { padding: 24px 0 24px 64px; }
 }
@@ -2157,6 +2159,7 @@ a.info-value:hover { color: var(--cyan); }
   .contact-form { padding: 24px 20px; }
 
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-grid-5col { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
   .footer-links { flex-wrap: wrap; gap: 12px; }
 

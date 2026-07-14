@@ -8,11 +8,28 @@
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JECBD8LKHR"></script>
   <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-JECBD8LKHR');</script>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1826402128787232');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1826402128787232&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
   <title>SEO para Inmobiliarias — De Invisible a #1 en Google | Skyaweb</title>
   <meta name="description"
     content="SEO especializado para inmobiliarias y home staging. Caso real: de cero visibilidad a la posición #1 en Google en 4 meses, +280% de leads. Consulta gratis." />
   <meta name="keywords"
-    content="seo para inmobiliarias, seo inmobiliario, posicionamiento web inmobiliarias, agencia seo inmobiliarias zaragoza, seo para home staging, marketing digital inmobiliario, aparecer en google inmobiliaria" />
+    content="seo para inmobiliarias, seo inmobiliario, posicionamiento web inmobiliarias, agencia seo inmobiliarias zaragoza, seo para home staging, marketing digital inmobiliario, aparecer en google inmobiliaria, home staging valencia, homestaging valencia" />
   <meta name="geo.region" content="ES-Z" />
   <meta name="geo.placename" content="Zaragoza, Aragón, España" />
   <meta name="geo.position" content="41.6488;-0.8891" />
@@ -39,8 +56,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@40,500;40,600;40,700;40,800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@500;600;700&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="pages.css" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/pages.css" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -84,7 +101,12 @@
           {"@type": "City", "name": "Zaragoza"},
           {"@type": "AdministrativeArea", "name": "Aragón"},
           {"@type": "Country", "name": "España"}
-        ]
+        ],
+        "mentions": {
+          "@type": "Organization",
+          "name": "HomeStaging Valencia",
+          "url": "https://homestagingvalencia.com"
+        }
       },
       {
         "@type": "FAQPage",
@@ -524,6 +546,7 @@
                 <line x1="10" y1="14" x2="21" y2="3" />
               </svg>
             </a>
+            <a href="/valencia/agencia-seo" class="btn-ghost" style="font-size:13px;">SEO en Valencia</a>
             <a href="/casos-exito" class="btn-ghost" style="font-size:13px;">Ver todos los casos</a>
           </div>
         </div>
@@ -676,7 +699,7 @@
     <span class="whatsapp-pulse" aria-hidden="true"></span>
   </a>
 
-  <script src="script.js"></script>
+  <script src="/script.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>

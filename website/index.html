@@ -7,6 +7,23 @@
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JECBD8LKHR"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JECBD8LKHR');</script>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1826402128787232');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1826402128787232&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
   <!-- SEO Técnico: máxima visibilidad de snippet, imagen y vídeo en Google -->
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="theme-color" content="#15181D" />
@@ -282,8 +299,8 @@
     href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@40,500;40,600;40,700;40,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600;700&display=swap"
     rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="pages.css" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/pages.css" />
 </head>
 
 <body>
@@ -927,6 +944,7 @@
           </tbody>
         </table>
       </div>
+      <p class="comparison-scroll-hint">← Desliza para ver la comparativa completa →</p>
     </div>
   </section>
 
@@ -1862,7 +1880,7 @@
   ═══════════════════════════════════════════════ -->
   <footer class="footer" role="contentinfo">
     <div class="container">
-      <div class="footer-grid">
+      <div class="footer-grid footer-grid-5col">
         <div class="footer-brand">
           <a href="#inicio" class="nav-logo" aria-label="Skyaweb inicio">
             <img src="/images/skyaweb-blanco-sin-fondo.png" alt="Skyaweb — Agencia de IA para PYMEs en España" width="150" height="150" />
@@ -1891,6 +1909,16 @@
             <li><a href="/sobre-nosotros">Nosotros</a></li>
             <li><a href="#faq">Preguntas frecuentes</a></li>
             <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-nav" aria-label="Ciudades">
+          <h3>Zaragoza · Valencia</h3>
+          <ul role="list">
+            <li><a href="/zaragoza/agencia-seo">SEO Zaragoza</a></li>
+            <li><a href="/zaragoza/agencia-ia">IA Zaragoza</a></li>
+            <li><a href="/valencia/agencia-seo">SEO Valencia</a></li>
+            <li><a href="/valencia/agencia-ia">IA Valencia</a></li>
           </ul>
         </nav>
 
@@ -1923,7 +1951,7 @@
     <span class="whatsapp-pulse" aria-hidden="true"></span>
   </a>
 
-  <script src="script.js"></script>
+  <script src="/script.js"></script>
 </body>
 
 </html>

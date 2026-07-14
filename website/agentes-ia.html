@@ -7,6 +7,23 @@
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JECBD8LKHR"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JECBD8LKHR');</script>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1826402128787232');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1826402128787232&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
   <title>Agentes de IA para Empresas — Atención y Ventas 24/7 | Skyaweb</title>
   <meta name="description" content="Desplegamos agentes de inteligencia artificial que atienden, cualifican y convierten clientes 24/7 en web, WhatsApp e Instagram. Servicio de Skyaweb para PYMEs de Zaragoza y España." />
   <meta name="keywords" content="agentes de ia para empresas, chatbot inteligente empresas, agente ia whatsapp, automatización de ventas con ia, asistente virtual pymes, captación de clientes con ia, inteligencia artificial atención al cliente" />
@@ -32,8 +49,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@40,500;40,600;40,700;40,800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="pages.css" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/pages.css" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -112,6 +129,14 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Sí. Operamos en cumplimiento con el RGPD. Los datos se almacenan en servidores europeos, con cifrado en tránsito y en reposo. Te entregamos el DPA (Data Processing Agreement) firmado para tu tranquilidad legal."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Con quién voy a hablar si contrato el servicio?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Conmigo directamente. No hay comerciales ni gestores de cuenta intermedios: la misma persona que diseña, entrena y mantiene tu agente de IA es quien responde tus dudas."
             }
           }
         ]
@@ -433,6 +458,7 @@
           </tbody>
         </table>
       </div>
+      <p class="comparison-scroll-hint">← Desliza para ver la comparativa completa →</p>
     </div>
   </section>
 
@@ -482,6 +508,13 @@
             <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
           </button>
           <div class="faq-answer" id="fai-4" role="region"><p>Sí. Operamos en cumplimiento con el RGPD. Los datos se almacenan en servidores europeos, con cifrado en tránsito y en reposo. Te entregamos el DPA (Data Processing Agreement) firmado para tu tranquilidad legal.</p></div>
+        </div>
+        <div class="faq-item reveal" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="fai-5">
+            <span>¿Con quién voy a hablar si contrato el servicio?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer" id="fai-5" role="region"><p>Conmigo directamente. No hay comerciales ni gestores de cuenta intermedios: la misma persona que diseña, entrena y mantiene tu agente de IA es quien responde tus dudas.</p></div>
         </div>
       </div>
     </div>
@@ -548,7 +581,7 @@
     <span class="whatsapp-pulse" aria-hidden="true"></span>
   </a>
 
-  <script src="script.js"></script>
+  <script src="/script.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>

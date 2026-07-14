@@ -353,6 +353,7 @@ document.querySelectorAll('.faq-question').forEach(btn => {
   const iframe = document.getElementById('modal-iframe');
   const close = document.getElementById('modal-close');
   const backdrop = document.getElementById('modal-backdrop');
+  if (!modal || !iframe || !close || !backdrop) return;
   let lastFocus = null;
 
   function openModal(videoUrl) {
@@ -639,7 +640,7 @@ document.querySelectorAll('a[href*="wa.me"]').forEach(el => {
     banner.innerHTML = `
       <div class="cookie-banner-inner">
         <div class="cookie-banner-text">
-          <p>Usamos cookies propias y de terceros (Google Analytics y Google AdSense) para analizar el tráfico y mostrar publicidad personalizada. Consulta nuestra <a href="/cookies">política de cookies</a> y <a href="/privacidad">política de privacidad</a>.</p>
+          <p>Usamos cookies propias y de terceros (Google Analytics, Google AdSense y Meta Pixel) para analizar el tráfico y mostrar publicidad personalizada. Consulta nuestra <a href="/cookies">política de cookies</a> y <a href="/privacidad">política de privacidad</a>.</p>
         </div>
         <div class="cookie-banner-actions">
           <button class="cookie-btn-reject" id="cookie-reject">Solo esenciales</button>

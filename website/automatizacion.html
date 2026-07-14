@@ -7,6 +7,23 @@
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JECBD8LKHR"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JECBD8LKHR');</script>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1826402128787232');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1826402128787232&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
   <title>Automatización Empresarial con IA en Zaragoza — Marketing, Leads y Ventas | Skyaweb</title>
   <meta name="description" content="Automatización empresarial con IA en Zaragoza. Emails, seguimiento de leads y nurturing inteligente que cierra ventas para PYMEs y empresas de Aragón." />
   <meta name="keywords" content="automatización empresarial con ia, automatización empresarial ia, automatización marketing ia zaragoza, automatización empresas zaragoza, email marketing automatizado zaragoza, marketing automation aragón, flujos automatizados pymes zaragoza, crm automatización zaragoza, cuánto cuesta una agencia de automatización ia" />
@@ -31,8 +48,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@40,500;40,600;40,700;40,800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="pages.css" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/pages.css" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -103,6 +120,14 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Depende del volumen de leads y la complejidad de los flujos que necesites. Trabajamos con planes mensuales sin permanencia ni contratos de larga duración: puedes cancelar cuando quieras. La primera consulta y auditoría de tus procesos es gratuita."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Con quién voy a hablar si contrato el servicio?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Conmigo directamente. No hay comerciales ni gestores de cuenta intermedios: la misma persona que diseña y mantiene tus flujos de automatización es quien responde tus dudas."
             }
           }
         ]
@@ -339,6 +364,10 @@
           <button class="faq-question" aria-expanded="false" aria-controls="fau-4"><span>¿Cuánto cuesta una agencia de automatización con IA?</span><svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
           <div class="faq-answer" id="fau-4" role="region"><p>Depende del volumen de leads y la complejidad de los flujos que necesites. Trabajamos con planes mensuales <strong style="color:var(--text-1);">sin permanencia ni contratos de larga duración</strong>: puedes cancelar cuando quieras. La primera consulta y auditoría de tus procesos es gratuita.</p></div>
         </div>
+        <div class="faq-item reveal" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="fau-5"><span>¿Con quién voy a hablar si contrato el servicio?</span><svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="faq-answer" id="fau-5" role="region"><p>Conmigo directamente. No hay comerciales ni gestores de cuenta intermedios: la misma persona que diseña y mantiene tus flujos de automatización es quien responde tus dudas.</p></div>
+        </div>
       </div>
     </div>
   </section>
@@ -380,7 +409,7 @@
     <span class="whatsapp-pulse" aria-hidden="true"></span>
   </a>
 
-  <script src="script.js"></script>
+  <script src="/script.js"></script>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
