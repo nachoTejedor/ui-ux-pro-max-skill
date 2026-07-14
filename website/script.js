@@ -442,7 +442,7 @@ document.querySelectorAll('.faq-question').forEach(btn => {
     submit.disabled = true;
     submit.innerHTML = `
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="animation:spin 1s linear infinite"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
-      Enviando...
+      Enviando (puede tardar unos segundos)...
     `;
 
     const interesLabels = {
@@ -453,10 +453,14 @@ document.querySelectorAll('.faq-question').forEach(btn => {
       'otro': 'Duda específica',
     };
 
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 15000);
+
     try {
       const res = await fetch('https://formsubmit.co/ajax/contacto@skyaweb.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        signal: controller.signal,
         body: JSON.stringify({
           _subject: `Nuevo contacto: ${interesLabels[form.interes.value] || form.interes.value} — ${form.nombre.value}`,
           _template: 'table',
@@ -469,6 +473,7 @@ document.querySelectorAll('.faq-question').forEach(btn => {
           Mensaje:   form.mensaje.value || '—',
         }),
       });
+      clearTimeout(timeout);
       if (!res.ok) throw new Error('server error');
       form.querySelectorAll('input, select, textarea, button').forEach(el => el.disabled = true);
       success.removeAttribute('hidden');
@@ -479,6 +484,7 @@ document.querySelectorAll('.faq-question').forEach(btn => {
         // gtag('event', 'conversion', { send_to: 'AW-XXXXXXXXX/XXXXXXXXXX' });
       }
     } catch (_err) {
+      clearTimeout(timeout);
       submit.disabled = false;
       submit.innerHTML = `
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
@@ -491,7 +497,8 @@ document.querySelectorAll('.faq-question').forEach(btn => {
         errMsg.style.cssText = 'color:#ef4444;text-align:center;margin-top:1rem;font-size:.875rem;';
         form.appendChild(errMsg);
       }
-      errMsg.textContent = 'Error al enviar. Escríbenos directamente por WhatsApp o a contacto@skyaweb.com';
+      const waText = encodeURIComponent(`Hola, intenté escribir por el formulario de la web pero no me funcionó. Me llamo ${form.nombre.value || ''} y quería hablar sobre: ${interesLabels[form.interes.value] || 'una consulta'}.`);
+      errMsg.innerHTML = `El formulario está tardando más de lo normal. Escríbenos directamente: <a href="https://wa.me/34628245180?text=${waText}" target="_blank" rel="noopener noreferrer" style="color:var(--cyan);font-weight:600;">WhatsApp</a> o <a href="mailto:contacto@skyaweb.com" style="color:var(--cyan);font-weight:600;">contacto@skyaweb.com</a>`;
     }
   });
 })();
