@@ -340,6 +340,62 @@
     </div>
   </section>
 
+  <!-- EN VIVO: RED DE AUTOMATIZACIÓN -->
+  <section class="page-section" aria-labelledby="live-net-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">En vivo</span>
+        <h2 id="live-net-heading" class="section-title">Así fluyen tus leads,<br /><span class="gradient-text">las 24 horas sin que muevas un dedo</span></h2>
+      </div>
+      <div class="live-net-card reveal">
+        <div class="live-net-svg-wrap">
+          <svg id="liveNetSvg" viewBox="0 0 1080 400" width="100%" height="auto" role="img" aria-label="Animación mostrando cómo los leads entran por varios canales, pasan por el motor de IA de Skyaweb y salen convertidos en email, WhatsApp, cita agendada o lead cualificado">
+            <line class="live-net-line" x1="130" y1="30"  x2="540" y2="190"/>
+            <line class="live-net-line" x1="130" y1="110" x2="540" y2="190"/>
+            <line class="live-net-line" x1="130" y1="190" x2="540" y2="190"/>
+            <line class="live-net-line" x1="130" y1="270" x2="540" y2="190"/>
+            <line class="live-net-line" x1="130" y1="350" x2="540" y2="190"/>
+
+            <line class="live-net-line flow" x1="540" y1="190" x2="950" y2="40"/>
+            <line class="live-net-line flow" x1="540" y1="190" x2="950" y2="140"/>
+            <line class="live-net-line flow" x1="540" y1="190" x2="950" y2="240"/>
+            <line class="live-net-line flow" x1="540" y1="190" x2="950" y2="340"/>
+
+            <circle class="live-net-node" id="ln-s1" cx="130" cy="30"  r="16" fill="var(--cyan-dim)" stroke="var(--cyan)" stroke-width="2"/>
+            <text x="130" y="66"  text-anchor="middle" fill="var(--text-2)" font-size="13">Formulario web</text>
+            <circle class="live-net-node" id="ln-s2" cx="130" cy="110" r="16" fill="var(--cyan-dim)" stroke="var(--cyan)" stroke-width="2"/>
+            <text x="130" y="146" text-anchor="middle" fill="var(--text-2)" font-size="13">WhatsApp</text>
+            <circle class="live-net-node" id="ln-s3" cx="130" cy="190" r="16" fill="var(--cyan-dim)" stroke="var(--cyan)" stroke-width="2"/>
+            <text x="130" y="226" text-anchor="middle" fill="var(--text-2)" font-size="13">Instagram</text>
+            <circle class="live-net-node" id="ln-s4" cx="130" cy="270" r="16" fill="var(--cyan-dim)" stroke="var(--cyan)" stroke-width="2"/>
+            <text x="130" y="306" text-anchor="middle" fill="var(--text-2)" font-size="13">Google Maps</text>
+            <circle class="live-net-node" id="ln-s5" cx="130" cy="350" r="16" fill="var(--cyan-dim)" stroke="var(--cyan)" stroke-width="2"/>
+            <text x="130" y="386" text-anchor="middle" fill="var(--text-2)" font-size="13">Llamada</text>
+
+            <circle class="live-net-ring" cx="540" cy="190" r="54" fill="none" stroke="var(--purple)" stroke-width="1.5" opacity="0.6"/>
+            <circle class="live-net-node" id="ln-hub" cx="540" cy="190" r="54" fill="var(--purple-dim)" stroke="var(--purple)" stroke-width="2"/>
+            <text x="540" y="196" text-anchor="middle" fill="var(--text-1)" font-size="14" font-weight="600">Motor de IA</text>
+
+            <circle class="live-net-node" id="ln-o1" cx="950" cy="40"  r="16" fill="rgba(255,0,110,0.12)" stroke="var(--magenta)" stroke-width="2"/>
+            <text x="950" y="76"  text-anchor="middle" fill="var(--text-2)" font-size="13">Email enviado</text>
+            <circle class="live-net-node" id="ln-o2" cx="950" cy="140" r="16" fill="rgba(255,0,110,0.12)" stroke="var(--magenta)" stroke-width="2"/>
+            <text x="950" y="176" text-anchor="middle" fill="var(--text-2)" font-size="13">WhatsApp enviado</text>
+            <circle class="live-net-node" id="ln-o3" cx="950" cy="240" r="16" fill="rgba(255,0,110,0.12)" stroke="var(--magenta)" stroke-width="2"/>
+            <text x="950" y="276" text-anchor="middle" fill="var(--text-2)" font-size="13">Cita agendada</text>
+            <circle class="live-net-node" id="ln-o4" cx="950" cy="340" r="16" fill="rgba(255,0,110,0.12)" stroke="var(--magenta)" stroke-width="2"/>
+            <text x="950" y="376" text-anchor="middle" fill="var(--text-2)" font-size="13">Lead cualificado</text>
+          </svg>
+        </div>
+        <div class="live-net-legend">
+          <span><span class="dot" style="background:var(--cyan);"></span>Canales de entrada</span>
+          <span><span class="dot" style="background:var(--purple);"></span>Motor de IA</span>
+          <span><span class="dot" style="background:var(--magenta);"></span>Acción automática</span>
+          <span class="count">Leads procesados hoy: <span id="liveNetCounter">0</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FAQ -->
   <section class="page-section" aria-labelledby="faq3-heading">
     <div class="container">
@@ -411,5 +467,94 @@
 
   <script src="/script.js"></script>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+  (function(){
+    var svg = document.getElementById('liveNetSvg');
+    if (!svg) return;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    var sources = [
+      {x:130,y:30},{x:130,y:110},{x:130,y:190},{x:130,y:270},{x:130,y:350}
+    ];
+    var sourceIds = ['ln-s1','ln-s2','ln-s3','ln-s4','ln-s5'];
+    var hub = {x:540,y:190};
+    var outputs = [
+      {x:950,y:40},{x:950,y:140},{x:950,y:240},{x:950,y:340}
+    ];
+    var outputIds = ['ln-o1','ln-o2','ln-o3','ln-o4'];
+
+    var counterEl = document.getElementById('liveNetCounter');
+    var count = 0;
+
+    function flashNode(id){
+      var el = document.getElementById(id);
+      if (!el) return;
+      el.style.transform = 'scale(1.3)';
+      setTimeout(function(){ el.style.transform = 'scale(1)'; }, 200);
+    }
+
+    function spawnPulse(){
+      var si = Math.floor(Math.random() * sources.length);
+      var oi = Math.floor(Math.random() * outputs.length);
+      var start = sources[si], end = outputs[oi];
+      var waypoints = [start, hub, end];
+
+      var circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      circle.setAttribute('r', '4');
+      circle.setAttribute('fill', 'var(--cyan)');
+      circle.setAttribute('cx', start.x);
+      circle.setAttribute('cy', start.y);
+      circle.style.filter = 'drop-shadow(0 0 4px var(--cyan))';
+      svg.appendChild(circle);
+      flashNode(sourceIds[si]);
+
+      var segDur = 420;
+      var seg = 0;
+      var segStart = null;
+
+      function frame(ts){
+        if (segStart === null) segStart = ts;
+        var t = Math.min(1, (ts - segStart) / segDur);
+        var a = waypoints[seg], b = waypoints[seg + 1];
+        circle.setAttribute('cx', a.x + (b.x - a.x) * t);
+        circle.setAttribute('cy', a.y + (b.y - a.y) * t);
+        if (seg === 1) {
+          circle.setAttribute('fill', 'var(--magenta)');
+          circle.style.filter = 'drop-shadow(0 0 4px var(--magenta))';
+        }
+        if (t >= 1) {
+          seg++;
+          segStart = ts;
+          if (seg === 1) flashNode('ln-hub');
+          if (seg >= waypoints.length - 1) {
+            flashNode(outputIds[oi]);
+            circle.style.transition = 'opacity .2s';
+            circle.style.opacity = '0';
+            setTimeout(function(){ circle.remove(); }, 200);
+            count++;
+            if (counterEl) counterEl.textContent = count;
+            return;
+          }
+        }
+        requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
+    }
+
+    function loop(){
+      spawnPulse();
+      setTimeout(loop, 500 + Math.random() * 700);
+    }
+
+    if (!reduce) {
+      loop();
+    } else {
+      setInterval(function(){
+        count++;
+        if (counterEl) counterEl.textContent = count;
+      }, 1500);
+    }
+  })();
+  </script>
 </body>
 </html>

@@ -158,6 +158,40 @@
   position: relative;
 }
 
+/* ── LIVE NETWORK (animación de automatización en tiempo real) ── */
+.live-net-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  overflow-x: auto;
+}
+.live-net-svg-wrap { min-width: 720px; }
+.live-net-legend {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text-3);
+}
+.live-net-legend .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-right: 6px; }
+.live-net-legend .count { margin-left: auto; color: var(--text-1); font-weight: 600; }
+.live-net-node { transition: transform 0.2s var(--ease-spring); transform-box: fill-box; transform-origin: center; }
+.live-net-ring { animation: waPulse 2.4s ease-out infinite; transform-box: fill-box; transform-origin: center; }
+.live-net-line { stroke: var(--border); stroke-width: 1.5; }
+.live-net-line.flow { stroke-dasharray: 3 7; animation: liveNetFlow 1.6s linear infinite; }
+@keyframes liveNetFlow { to { stroke-dashoffset: -20; } }
+@media (prefers-reduced-motion: reduce) {
+  .live-net-line.flow, .live-net-ring { animation: none; }
+}
+@media (max-width: 640px) {
+  .live-net-card { padding: 20px; }
+}
+
 /* ── FEATURE LIST ────────────────────────────── */
 .feature-list {
   list-style: none;
