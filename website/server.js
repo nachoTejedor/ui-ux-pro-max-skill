@@ -63,7 +63,14 @@ app.use((req, res, next) => {
 });
 
 app.use(express.json());
-app.use(express.static(__dirname));
+app.use(express.static(__dirname, {
+  maxAge: '30d',
+  setHeaders: (res, filePath) => {
+    if (filePath.endsWith('.html')) {
+      res.setHeader('Cache-Control', 'no-cache');
+    }
+  },
+}));
 
 /* Explicit text/plain routes required by Google crawler */
 app.get('/ads.txt', (_req, res) => {
@@ -281,6 +288,20 @@ const extraPages = [
   { url: '/zaragoza/desarrollo-web', file: 'zaragoza-desarrollo-web.html' },
   { url: '/zaragoza/agencia-ia',     file: 'zaragoza-agencia-ia.html' },
   { url: '/valencia/agencia-seo',    file: 'valencia-agencia-seo.html' },
+  { url: '/valencia/agencia-ia',     file: 'valencia-agencia-ia.html' },
+  { url: '/valencia/desarrollo-web', file: 'valencia-desarrollo-web.html' },
+  { url: '/huesca/agencia-seo',      file: 'huesca-agencia-seo.html' },
+  { url: '/huesca/agencia-ia',       file: 'huesca-agencia-ia.html' },
+  { url: '/huesca/desarrollo-web',   file: 'huesca-desarrollo-web.html' },
+  { url: '/la-rioja/agencia-seo',    file: 'la-rioja-agencia-seo.html' },
+  { url: '/la-rioja/agencia-ia',     file: 'la-rioja-agencia-ia.html' },
+  { url: '/la-rioja/desarrollo-web', file: 'la-rioja-desarrollo-web.html' },
+  { url: '/alicante/agencia-seo',    file: 'alicante-agencia-seo.html' },
+  { url: '/alicante/agencia-ia',     file: 'alicante-agencia-ia.html' },
+  { url: '/alicante/desarrollo-web', file: 'alicante-desarrollo-web.html' },
+  { url: '/castellon/agencia-seo',   file: 'castellon-agencia-seo.html' },
+  { url: '/castellon/agencia-ia',    file: 'castellon-agencia-ia.html' },
+  { url: '/castellon/desarrollo-web', file: 'castellon-desarrollo-web.html' },
 ];
 extraPages.forEach(({ url, file }) => {
   app.get(`${url}.html`, (_req, res) => res.redirect(301, url));

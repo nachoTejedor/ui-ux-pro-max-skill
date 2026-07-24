@@ -572,7 +572,8 @@ body {
 
 .typewriter {
   display: block;
-  min-height: 1.1em;
+  height: calc(1.06em * 2);
+  overflow: hidden;
   animation: fadeSlideDown 800ms 460ms var(--ease-out) both;
   filter: drop-shadow(0 0 24px rgba(255, 255, 255, 0.35));
 }

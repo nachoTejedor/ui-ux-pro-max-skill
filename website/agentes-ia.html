@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -32,8 +32,9 @@
   <meta name="geo.position" content="41.6488;-0.8891" />
   <meta name="ICBM" content="41.6488, -0.8891" />
   <link rel="canonical" href="https://skyaweb.com/agentes-ia" />
-  <link rel="icon" href="/images/cropped-skyaweb-sin-fondo.png" type="image/png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/cropped-skyaweb-sin-fondo.png" />
+  <link rel="icon" href="/images/favicon-48.png" sizes="48x48" type="image/png" />
+  <link rel="icon" href="/images/favicon-192.png" sizes="192x192" type="image/png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
   <meta property="og:title" content="Agentes de IA para Empresas — Atención y Ventas 24/7 | Skyaweb" />
   <meta property="og:description" content="Agentes de inteligencia artificial que captan y convierten clientes 24/7 en web, WhatsApp e Instagram. Consulta gratis." />
   <meta property="og:image" content="https://skyaweb.com/images/og-skyaweb.png" />
@@ -48,9 +49,11 @@
   <meta name="twitter:image" content="https://skyaweb.com/images/og-skyaweb.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@40,500;40,600;40,700;40,800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles.css" />
-  <link rel="stylesheet" href="/pages.css" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@40,500;40,600;40,700;40,800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@500;600;700&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@40,500;40,600;40,700;40,800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@40,500;40,600;40,700;40,800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" /></noscript>
+  <link rel="stylesheet" href="/styles.min.css" />
+  <link rel="stylesheet" href="/pages.min.css" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -151,7 +154,7 @@
   <nav class="navbar scrolled" id="navbar" role="navigation" aria-label="Navegación principal">
     <div class="nav-inner">
       <a href="/" class="nav-logo" aria-label="Skyaweb inicio">
-        <img src="/images/skyaweb-blanco-sin-fondo.png" alt="Logo Skyaweb" width="150" height="150" />
+        <img src="/images/skyaweb-blanco-sin-fondo.webp" alt="Logo Skyaweb" width="150" height="150" />
       </a>
       <ul class="nav-links" role="list">
         <li class="nav-dropdown">
@@ -473,6 +476,107 @@
     </div>
   </section>
 
+  <!-- EN VIVO: AUTOMATIZACIÓN TIPO N8N -->
+  <section class="page-section" aria-labelledby="n8n-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">En vivo</span>
+        <h2 id="n8n-heading" class="section-title">Así funciona tu agente<br /><span class="gradient-text">por dentro, en tiempo real</span></h2>
+        <p style="max-width:640px;margin:12px auto 0;color:var(--text-3);">Una llamada o un WhatsApp entra, el agente de IA consulta su modelo, su memoria y tu CRM, y decide la mejor acción. Sin que nadie lo toque.</p>
+      </div>
+      <div class="n8n-card reveal">
+        <div class="n8n-toolbar">
+          <span class="n8n-live-dot" aria-hidden="true"></span>
+          <span>Flujo activo</span>
+          <span class="n8n-toolbar-sep" aria-hidden="true"></span>
+          <span id="n8nStatusText">Esperando entrada…</span>
+        </div>
+        <div class="n8n-canvas-wrap">
+          <svg id="n8nFlowSvg" viewBox="0 0 1100 420" width="100%" height="auto" role="img" aria-label="Diagrama animado tipo n8n: una llamada o un WhatsApp entra, pasa por el agente de IA (modelo, memoria y CRM) y termina en un lead cualificado, una cita agendada o una compra">
+            <defs>
+              <pattern id="n8nGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+                <circle cx="1.5" cy="1.5" r="1.5" class="n8n-grid-dot"/>
+              </pattern>
+            </defs>
+            <rect x="0" y="0" width="1100" height="420" fill="url(#n8nGrid)"/>
+
+            <path id="n8n-path-t1" class="n8n-wire" d="M170,138 C300,138 300,175 460,175"/>
+            <path id="n8n-path-t2" class="n8n-wire" d="M170,278 C300,278 300,235 460,235"/>
+
+            <path id="n8n-path-o1" class="n8n-wire" d="M630,180 C770,180 770,88 910,88"/>
+            <path id="n8n-path-o2" class="n8n-wire" d="M630,205 C770,205 770,208 910,208"/>
+            <path id="n8n-path-o3" class="n8n-wire" d="M630,230 C770,230 770,328 910,328"/>
+
+            <path class="n8n-wire-dotted" d="M490,260 C470,300 440,320 440,350"/>
+            <path class="n8n-wire-dotted" d="M545,260 L545,350"/>
+            <path class="n8n-wire-dotted" d="M600,260 C620,300 650,320 650,350"/>
+
+            <g class="n8n-node">
+              <rect id="n8n-t1-box" class="n8n-node-rect trigger" x="20" y="110" width="150" height="56" rx="10"/>
+              <circle cx="46" cy="138" r="14" class="n8n-node-icon trigger"/>
+              <text x="46" y="142" text-anchor="middle" class="n8n-icon-txt">TEL</text>
+              <text x="70" y="142" class="n8n-node-label">Llamada entrante</text>
+            </g>
+            <g class="n8n-node">
+              <rect id="n8n-t2-box" class="n8n-node-rect trigger" x="20" y="250" width="150" height="56" rx="10"/>
+              <circle cx="46" cy="278" r="14" class="n8n-node-icon trigger"/>
+              <text x="46" y="282" text-anchor="middle" class="n8n-icon-txt">WA</text>
+              <text x="70" y="282" class="n8n-node-label">WhatsApp</text>
+            </g>
+
+            <g class="n8n-node">
+              <rect id="n8n-hub-box" class="n8n-node-rect hub" x="460" y="150" width="170" height="110" rx="14"/>
+              <circle cx="490" cy="180" r="15" class="n8n-node-icon hub"/>
+              <text x="490" y="185" text-anchor="middle" class="n8n-icon-txt">IA</text>
+              <text x="514" y="185" class="n8n-node-label">Agente IA</text>
+              <text x="545" y="235" text-anchor="middle" class="n8n-node-sub" id="n8nHubStatus">Analizando…</text>
+            </g>
+
+            <g class="n8n-node">
+              <rect id="n8n-sub1-box" class="n8n-node-rect subnode" x="390" y="350" width="100" height="44" rx="8"/>
+              <text x="440" y="376" text-anchor="middle" class="n8n-node-label small">Modelo IA</text>
+            </g>
+            <g class="n8n-node">
+              <rect id="n8n-sub2-box" class="n8n-node-rect subnode" x="495" y="350" width="100" height="44" rx="8"/>
+              <text x="545" y="376" text-anchor="middle" class="n8n-node-label small">Memoria</text>
+            </g>
+            <g class="n8n-node">
+              <rect id="n8n-sub3-box" class="n8n-node-rect subnode" x="600" y="350" width="100" height="44" rx="8"/>
+              <text x="650" y="376" text-anchor="middle" class="n8n-node-label small">CRM / Agenda</text>
+            </g>
+
+            <g class="n8n-node">
+              <rect id="n8n-o1-box" class="n8n-node-rect output" x="910" y="60" width="170" height="56" rx="10"/>
+              <circle cx="936" cy="88" r="14" class="n8n-node-icon output"/>
+              <text x="936" y="93" text-anchor="middle" class="n8n-icon-txt">✓</text>
+              <text x="960" y="84" class="n8n-node-label">Lead cualificado</text>
+              <text x="960" y="100" class="n8n-node-count">Hoy: <tspan id="n8nCount1">0</tspan></text>
+            </g>
+            <g class="n8n-node">
+              <rect id="n8n-o2-box" class="n8n-node-rect output" x="910" y="180" width="170" height="56" rx="10"/>
+              <circle cx="936" cy="208" r="14" class="n8n-node-icon output"/>
+              <text x="936" y="213" text-anchor="middle" class="n8n-icon-txt">✓</text>
+              <text x="960" y="204" class="n8n-node-label">Cita agendada</text>
+              <text x="960" y="220" class="n8n-node-count">Hoy: <tspan id="n8nCount2">0</tspan></text>
+            </g>
+            <g class="n8n-node">
+              <rect id="n8n-o3-box" class="n8n-node-rect output" x="910" y="300" width="170" height="56" rx="10"/>
+              <circle cx="936" cy="328" r="14" class="n8n-node-icon output"/>
+              <text x="936" y="333" text-anchor="middle" class="n8n-icon-txt">✓</text>
+              <text x="960" y="324" class="n8n-node-label">Compra confirmada</text>
+              <text x="960" y="340" class="n8n-node-count">Hoy: <tspan id="n8nCount3">0</tspan></text>
+            </g>
+          </svg>
+        </div>
+        <div class="n8n-legend">
+          <span><span class="dot" style="background:var(--cyan);"></span>Entrada: llamada / WhatsApp</span>
+          <span><span class="dot" style="background:var(--purple);"></span>Agente IA + herramientas</span>
+          <span><span class="dot" style="background:var(--magenta);"></span>Resultado de negocio</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FAQ -->
   <section class="page-section" aria-labelledby="faq-heading">
     <div class="container">
@@ -541,7 +645,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/" class="nav-logo" aria-label="Skyaweb inicio">
-            <img src="/images/skyaweb-blanco-sin-fondo.png" alt="Logo Skyaweb" width="150" height="150" />
+            <img src="/images/skyaweb-blanco-sin-fondo.webp" alt="Logo Skyaweb" width="150" height="150" />
           </a>
           <p>Agencia especializada en inteligencia artificial para empresas y PYMEs.</p>
           <address><a href="tel:+34628245180">628 245 180</a><br /><a href="mailto:contacto@skyaweb.com">contacto@skyaweb.com</a></address>
@@ -581,9 +685,118 @@
     <span class="whatsapp-pulse" aria-hidden="true"></span>
   </a>
 
-  <script src="/script.js"></script>
+  <script src="/script.min.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script>
+  (function(){
+    var svg = document.getElementById('n8nFlowSvg');
+    if (!svg) return;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    var triggers = [
+      { path: document.getElementById('n8n-path-t1'), box: 'n8n-t1-box', label: 'Llamada entrante' },
+      { path: document.getElementById('n8n-path-t2'), box: 'n8n-t2-box', label: 'WhatsApp entrante' }
+    ];
+    var outputs = [
+      { path: document.getElementById('n8n-path-o1'), box: 'n8n-o1-box', counter: 'n8nCount1', label: 'Lead cualificado' },
+      { path: document.getElementById('n8n-path-o2'), box: 'n8n-o2-box', counter: 'n8nCount2', label: 'Cita agendada' },
+      { path: document.getElementById('n8n-path-o3'), box: 'n8n-o3-box', counter: 'n8nCount3', label: 'Compra confirmada' }
+    ];
+    var subBoxes = ['n8n-sub1-box', 'n8n-sub2-box', 'n8n-sub3-box'];
+    var hubStatuses = ['Analizando intención…', 'Consultando memoria…', 'Verificando CRM…', 'Cualificando…'];
+    var statusEl = document.getElementById('n8nStatusText');
+    var hubStatusEl = document.getElementById('n8nHubStatus');
+    var counts = [0, 0, 0];
+
+    function flash(id){
+      var el = document.getElementById(id);
+      if (!el) return;
+      el.style.transform = 'scale(1.08)';
+      setTimeout(function(){ el.style.transform = 'scale(1)'; }, 220);
+    }
+
+    function moveAlong(path, circle, duration, cb){
+      var len = path.getTotalLength();
+      var start = null;
+      function frame(ts){
+        if (start === null) start = ts;
+        var t = Math.min(1, (ts - start) / duration);
+        var pt = path.getPointAtLength(len * t);
+        circle.setAttribute('cx', pt.x);
+        circle.setAttribute('cy', pt.y);
+        if (t < 1) {
+          requestAnimationFrame(frame);
+        } else if (cb) {
+          cb();
+        }
+      }
+      requestAnimationFrame(frame);
+    }
+
+    function runCycle(){
+      var trig = triggers[Math.floor(Math.random() * triggers.length)];
+      var out = outputs[Math.floor(Math.random() * outputs.length)];
+
+      if (statusEl) statusEl.textContent = trig.label;
+      flash(trig.box);
+
+      var circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      circle.setAttribute('r', '4.5');
+      circle.setAttribute('fill', 'var(--cyan)');
+      circle.style.filter = 'drop-shadow(0 0 4px var(--cyan))';
+      svg.appendChild(circle);
+
+      moveAlong(trig.path, circle, 550, function(){
+        flash('n8n-hub-box');
+        circle.setAttribute('fill', 'var(--purple)');
+        circle.style.filter = 'drop-shadow(0 0 4px var(--purple))';
+
+        var i = 0;
+        var subInterval = setInterval(function(){
+          if (i >= subBoxes.length) { clearInterval(subInterval); return; }
+          flash(subBoxes[i]);
+          if (hubStatusEl) hubStatusEl.textContent = hubStatuses[Math.floor(Math.random() * hubStatuses.length)];
+          i++;
+        }, 160);
+
+        setTimeout(function(){
+          circle.setAttribute('fill', 'var(--magenta)');
+          circle.style.filter = 'drop-shadow(0 0 4px var(--magenta))';
+          moveAlong(out.path, circle, 550, function(){
+            flash(out.box);
+            if (statusEl) statusEl.textContent = out.label;
+            if (hubStatusEl) hubStatusEl.textContent = 'Analizando…';
+            var idx = outputs.indexOf(out);
+            counts[idx]++;
+            var counterEl = document.getElementById(out.counter);
+            if (counterEl) counterEl.textContent = counts[idx];
+            circle.style.transition = 'opacity .2s';
+            circle.style.opacity = '0';
+            setTimeout(function(){ circle.remove(); }, 200);
+            setTimeout(function(){ if (statusEl) statusEl.textContent = 'Esperando entrada…'; }, 900);
+          });
+        }, 620);
+      });
+    }
+
+    function loop(){
+      runCycle();
+      setTimeout(loop, 2600 + Math.random() * 1200);
+    }
+
+    if (!reduce) {
+      loop();
+    } else {
+      setInterval(function(){
+        var idx = Math.floor(Math.random() * outputs.length);
+        counts[idx]++;
+        var counterEl = document.getElementById(outputs[idx].counter);
+        if (counterEl) counterEl.textContent = counts[idx];
+      }, 2000);
+    }
+  })();
   </script>
 </body>
 </html>
